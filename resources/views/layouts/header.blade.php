@@ -101,43 +101,43 @@
 
                 <!-- Catalog menu - start -->
                 <div class="topcatalog">
-                    <a class="topcatalog-btn" href="catalog-list.html"><span>All</span> catalog</a>
+                    <a class="topcatalog-btn" href="catalog-list.html"><span>Xem</span> Tất cả</a>
                     <ul class="topcatalog-list">
                         <li>
                             <a href="catalog-list.html">
-                                Women
+                                Shop Nữ
                             </a>
                             <i class="fa fa-angle-right"></i>
                             <ul>
                                 <li>
                                     <a href="catalog-list.html">
-                                        Knitwear
+                                        Quần Jen
                                     </a>
                                 </li>
                                 <li>
                                     <a href="catalog-list.html">
-                                        Dresses
+                                        Đầm Dạ Hội
                                     </a>
                                 </li>
                                 <li>
                                     <a href="catalog-list.html">
-                                        Bags
+                                        Áo Thun
                                     </a>
                                     <i class="fa fa-angle-right"></i>
                                     <ul>
                                         <li>
                                             <a href="catalog-list.html">
-                                                Shoulder Bags
+                                                Áo Thun Tay Ngắn
                                             </a>
                                         </li>
                                         <li>
                                             <a href="catalog-list.html">
-                                                Falabella
+                                                Áo Thun Tay Dài
                                             </a>
                                         </li>
                                         <li>
                                             <a href="catalog-list.html">
-                                                Becks
+                                                Áo Thun Cặp
                                             </a>
                                         </li>
                                         <li>
@@ -154,13 +154,13 @@
                                 </li>
                                 <li>
                                     <a href="catalog-list.html">
-                                        Accessories
+                                        Giày
                                     </a>
                                     <i class="fa fa-angle-right"></i>
                                     <ul>
                                         <li>
                                             <a href="catalog-list.html">
-                                                Sunglasses
+                                                Fazila
                                             </a>
                                         </li>
                                         <li>
@@ -182,14 +182,14 @@
                                 </li>
                                 <li>
                                     <a href="catalog-list.html">
-                                        Coats & Jackets
+                                        Áo Khoác
                                     </a>
                                 </li>
                             </ul>
                         </li>
                         <li>
                             <a href="catalog-list.html">
-                                Men
+                                Shop Nam
                             </a>
                             <i class="fa fa-angle-right"></i>
                             <ul>
@@ -240,7 +240,7 @@
                         </li>
                         <li>
                             <a href="catalog-list.html">
-                                Kids
+                                Trẻ Em
                             </a>
                             <i class="fa fa-angle-right"></i>
                             <ul>
@@ -485,32 +485,32 @@
                 <ul class="mainmenu">
                     <li>
                         <a href="index.html" class="active">
-                            Home
+                            Trang chủ
                         </a>
                     </li>
                     <li class="menu-item-has-children">
                         <a href="catalog-list.html">
-                            Catalog <i class="fa fa-angle-down"></i>
+                            Thể Loại <i class="fa fa-angle-down"></i>
                         </a>
                         <ul class="sub-menu">
                             <li>
                                 <a href="catalog-list.html">
-                                    Catalog List - Style 1
+                                    Thời Trang Nam
                                 </a>
                             </li>
                             <li>
                                 <a href="catalog-list-2.html">
-                                    Catalog List - Style 2
+                                    Thời Trang Nữ
                                 </a>
                             </li>
                             <li>
                                 <a href="catalog-gallery.html">
-                                    Catalog Gallery - Style 1
+                                    Trẻ Em
                                 </a>
                             </li>
                             <li>
                                 <a href="catalog-gallery-2.html">
-                                    Catalog Gallery - Style 2
+                                    Tui
                                 </a>
                             </li>
                             <li>

@@ -28,4 +28,12 @@ class HomeController extends Controller
         ->where('sex', '=', 0)->get();
         return view('home.home', compact('products', 'productsWoment', 'productsMen', 'productsKids'));
     }
+
+    public function category()
+    {
+        return view('home.category');
+    }
+    public function detail(){
+        return view('home.detail');
+    }
 }
