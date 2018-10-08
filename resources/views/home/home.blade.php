@@ -3,8 +3,6 @@
 @section('content')
 <main>
     <section class="container">
-
-
         <!-- Slider -->
         <div class="fr-slider-wrap">
             <div class="fr-slider">
@@ -46,9 +44,7 @@
 
         <!-- Popular Products -->
         <div class="fr-pop-wrap">
-
             <h3 class="component-ttl"><span>Sản phẩm hiện có</span></h3>
-
             <ul class="fr-pop-tabs sections-show">
                 <li><a data-frpoptab-num="1" data-frpoptab="#frpoptab-tab-1" href="#" class="active">Tất cả các loại</a></li>
                 <li><a data-frpoptab-num="2" data-frpoptab="#frpoptab-tab-2" href="#">Đồ nữ</a></li>
@@ -56,12 +52,9 @@
                 <li><a data-frpoptab-num="4" data-frpoptab="#frpoptab-tab-4" href="#">Trẻ em</a></li>
                 <li><a data-frpoptab-num="5" data-frpoptab="#frpoptab-tab-5" href="#">Thế giới giày</a></li>
             </ul>
-
             <div class="fr-pop-tab-cont">
-
                 <p data-frpoptab-num="1" class="fr-pop-tab-mob active" data-frpoptab="#frpoptab-tab-1">Tất cả các loại</p>
                 <div class="flexslider prod-items fr-pop-tab" id="frpoptab-tab-1">
-
                     <ul class="slides">
                         @foreach($products as $items)
                         <li class="prod-i">
@@ -92,10 +85,8 @@
                         @endforeach
                     </ul>
                 </div>
-
                 <p data-frpoptab-num="2" class="fr-pop-tab-mob" data-frpoptab="#frpoptab-tab-2">Women</p>
                 <div class="flexslider prod-items fr-pop-tab" id="frpoptab-tab-2">
-
                     <ul class="slides">
                         @foreach($productsWoment as $items)
                         <li class="prod-i">
@@ -126,7 +117,6 @@
                         @endforeach
                     </ul>
                 </div>
-
                 <p data-frpoptab-num="3" class="fr-pop-tab-mob" data-frpoptab="#frpoptab-tab-3">Men</p>
                 <div class="flexslider prod-items fr-pop-tab" id="frpoptab-tab-3">
                     <ul class="slides">
@@ -153,10 +143,8 @@
                         @endforeach
                     </ul>
                 </div>
-
                 <p data-frpoptab-num="4" class="fr-pop-tab-mob" data-frpoptab="#frpoptab-tab-4">Kids</p>
                 <div class="flexslider prod-items fr-pop-tab" id="frpoptab-tab-4">
-
                     <ul class="slides">
                         @foreach($productsKids as $items)
                         <li class="prod-i">
@@ -180,15 +168,10 @@
                         </li>
                         @endforeach
                     </ul>
-
                 </div>
-
-
                 <p data-frpoptab-num="5" class="fr-pop-tab-mob" data-frpoptab="#frpoptab-tab-5">Shoes</p>
                 <div class="flexslider prod-items fr-pop-tab" id="frpoptab-tab-5">
-
                     <ul class="slides">
-
                         <li class="prod-i">
                             <div class="prod-i-top">
                                 <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/252x250" alt="Nisi autem error"><!-- NO SPACE --></a>
@@ -374,14 +357,8 @@
                     </ul>
 
                 </div>
-
-
             </div><!-- .fr-pop-tab-cont -->
-
-
         </div><!-- .fr-pop-wrap -->
-
-
         <!-- Banners -->
         <div class="banners-wrap">
             <div class="banners-list">
@@ -434,8 +411,6 @@
                 </div>
             </div>
         </div>
-
-
         <!-- Special offer -->
         <div class="discounts-wrap">
             <h3 class="component-ttl"><span>Special offer</span></h3>
