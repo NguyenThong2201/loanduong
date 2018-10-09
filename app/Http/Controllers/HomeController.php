@@ -29,12 +29,8 @@ class HomeController extends Controller
         return view('home.home', compact('products', 'productsWoment', 'productsMen', 'productsKids'));
     }
 
-    public function category()
-    {
-        return view('home.category');
-    }
-    public function detail(){
-        return view('home.detail');
+    public function getDetail(){
+
     }
     public function getDetailAjax(){
         $productId = $_POST['product_id'];
