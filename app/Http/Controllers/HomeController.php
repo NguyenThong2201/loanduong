@@ -36,4 +36,10 @@ class HomeController extends Controller
     public function detail(){
         return view('home.detail');
     }
+    public function getDetailAjax(){
+        $productId = $_POST['product_id'];
+        echo $productId; die;
+        $productDetail = Product::where('product_id', '=', $productId);
+        print_r($productDetail);
+    }
 }

@@ -14,6 +14,7 @@
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/category', 'HomeController@category')->name('category');
 Route::get('/detail', 'HomeController@detail')->name('detail');
+Route::post('/getDetailAjax', 'HomeController@getDetailAjax')->name('detailAjax');
 Auth::routes();
 Route::group(['prefix'=>'admin'],function(){
     Route::get('dashboard',[

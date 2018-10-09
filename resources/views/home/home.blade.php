@@ -68,7 +68,7 @@
                                 <a href="#" class="prod-i-img"><!-- NO SPACE --><img src="/page/image/product/{{$items->image}}" alt="Aspernatur excepturi rem"><!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Yêu thích</span><i class="fa fa-heart"></i></a>
-                                    <a href="#" class="qview-btn prod-i-qview"><span>Chi tiết</span><i class="fa fa-search"></i></a>
+                                    <a href="#" data-product-id='{{ $items->product_id }}' class="qview-btn prod-i-qview"><span>Chi tiết</span><i class="fa fa-search"></i></a>
                                     <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">

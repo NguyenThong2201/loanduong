@@ -50,6 +50,7 @@
 <script src="{{ asset('home/js/chosen.jquery.min.js') }}"></script>
 <script src="{{ asset('home/js/jQuery.Brazzers-Carousel.js') }}"></script>
 <script src="{{ asset('home/js/plugins.js') }}"></script>
+<script src="{{ asset('js/products.js') }}"></script>
 <script src="{{ asset('home/js/main.js') }}"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhAYvx0GmLyN5hlf6Uv_e9pPvUT3YpozE"></script>
 <script src="js/gmap.js"></script>
