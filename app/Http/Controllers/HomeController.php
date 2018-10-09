@@ -33,9 +33,8 @@ class HomeController extends Controller
 
     }
     public function getDetailAjax(){
-        $productId = $_POST['product_id'];
-        echo $productId; die;
-        $productDetail = Product::where('product_id', '=', $productId);
-        print_r($productDetail);
+        $productId = $_GET['product_id'];
+        $productDetail = Product::where('product_id', '=', $productId)->get();
+        return json_encode($productDetail);
     }
 }
