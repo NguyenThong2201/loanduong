@@ -101,7 +101,7 @@
 
                 <!-- Catalog menu - start -->
                 <div class="topcatalog">
-                    <a class="topcatalog-btn" href="catalog-list.html"><span>Xem</span> Tất cả</a>
+                    <a class="topcatalog-btn" href="catalog-list.html"><span>ALL</span> Category</a>
                     <ul class="topcatalog-list">
                         <li>
                             <a href="catalog-list.html">
@@ -485,12 +485,12 @@
                 <ul class="mainmenu">
                     <li>
                         <a href="index.html" class="active">
-                            Trang chủ
+                            Home
                         </a>
                     </li>
                     <li class="menu-item-has-children">
                         <a href="catalog-list.html">
-                            Thể Loại <i class="fa fa-angle-down"></i>
+                            Category <i class="fa fa-angle-down"></i>
                         </a>
                         <ul class="sub-menu">
                             <li>

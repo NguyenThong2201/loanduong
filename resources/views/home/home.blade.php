@@ -9,7 +9,7 @@
                     <li>
                         <img src="/home/img/slider/slide1.jpg" alt="">
                         <div class="fr-slider-cont">
-                            <h3>KHUYẾN MÃI -30%</h3>
+                            <h3>SALE OF -30%</h3>
                             <p>Winter collection for women's. <br>We all have choices for you. Check it out!</p>
                             <p class="fr-slider-more-wrap">
                                 <a class="fr-slider-more" href="#">View collection</a>
@@ -43,11 +43,11 @@
 
         <!-- Popular Products -->
         <div class="fr-pop-wrap">
-            <h3 class="component-ttl"><span>Sản phẩm hiện có</span></h3>
+            <h3 class="component-ttl"><span>All category</span></h3>
             <ul class="fr-pop-tabs sections-show">
-                <li><a data-frpoptab-num="1" data-frpoptab="#frpoptab-tab-1" href="#" class="active">Tất cả các loại</a></li>
-                <li><a data-frpoptab-num="2" data-frpoptab="#frpoptab-tab-2" href="#">Đồ nữ</a></li>
-                <li><a data-frpoptab-num="3" data-frpoptab="#frpoptab-tab-3" href="#">Đồ nam</a></li>
+                <li><a data-frpoptab-num="1" data-frpoptab="#frpoptab-tab-1" href="#" class="active">ALL</a></li>
+                <li><a data-frpoptab-num="2" data-frpoptab="#frpoptab-tab-2" href="#">Woment</a></li>
+                <li><a data-frpoptab-num="3" data-frpoptab="#frpoptab-tab-3" href="#">Men</a></li>
                 <li><a data-frpoptab-num="4" data-frpoptab="#frpoptab-tab-4" href="#">Trẻ em</a></li>
                 <li><a data-frpoptab-num="5" data-frpoptab="#frpoptab-tab-5" href="#">Thế giới giày</a></li>
             </ul>
@@ -58,7 +58,7 @@
                         @foreach($products as $items)
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="#" class="prod-i-img"><!-- NO SPACE --><img src="/page/image/product/{{$items->image}}" alt="Aspernatur excepturi rem"><!-- NO SPACE --></a>
+                                <a href="#" class="prod-i-img"><img src="/page/image/product/{{$items->image}}" alt="Aspernatur excepturi rem"></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Yêu thích</span><i class="fa fa-heart"></i></a>
                                     <a href="#" data-product-id='{{ $items->product_id }}' class="qview-btn prod-i-qview"><span>Chi tiết</span><i class="fa fa-search"></i></a>

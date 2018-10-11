@@ -34,7 +34,15 @@ class HomeController extends Controller
     }
     public function getDetailAjax(){
         $productId = $_GET['product_id'];
-        $productDetail = Product::where('product_id', '=', $productId)->first();
-        return json_encode($productDetail);
+        $allProductDetail = [];
+        $productDetail = DB::table('products')
+            ->select('*')->where('product_id', '=', $productId)->first();
+        $imgProducts   = DB::table('images')
+            ->select('img_name')
+            ->where('product_id', '=', $productId)
+            ->get();
+        $allProductDetail['product'] = $productDetail;
+        $allProductDetail['listImg'] = $imgProducts;
+        return json_encode($allProductDetail);
     }
 }

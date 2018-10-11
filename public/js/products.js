@@ -4,6 +4,7 @@ $(document).ready(function () {
 		$.ajax({
             url: '/getDetailAjax',
             type: 'GET',
+            dataType: 'json',
             data: {
                 'product_id': product_id
             },
@@ -12,15 +13,23 @@ $(document).ready(function () {
                 let html = '';
                 html += '<a href="product.html">' +
                     '       <h1 class="main-ttl">' +
-                    '         <span>'+ response.title +'</span>' +
+                    '         <span>'+ response.product.title +'</span>' +
                     '       </h1>' +
                     '    </a>' +
                     '    <div class="prod-slider-wrap">' +
                     '        <div class="prod-slider">' +
                     '          <ul class="prod-slider-car">' +
                     '             <li>' +
-                    '                 <a data-fancybox-group="popup-product" class="fancy-img" href="http://placehold.it/500x525">\n' +
-                    '                     <img src="http://placehold.it/500x525" alt="">' +
+                    '                 <a data-fancybox-group="popup-product" class="fancy-img" href="http://placehold.it/500x525">' +
+                    '                     <img src="/page/image/product/' + response.product.image + '" alt="">' +
+                    '                 </a>' +
+                    '              </li>' +
+                                    response.listImg.each(function () {
+
+                                    });
+                    '              <li>' +
+                    '                 <a data-fancybox-group="popup-product" class="fancy-img" href="http://placehold.it/500x525">' +
+                    '                     <img src="/page/image/product/' + response.product.image + '" alt="">' +
                     '                 </a>' +
                     '              </li>' +
                     '         </ul>' +
@@ -28,32 +37,32 @@ $(document).ready(function () {
                     '    </div>' +
                     '    <div class="prod-cont">' +
                     '       <p class="prod-actions">' +
-                    '           <a href="#" class="prod-favorites"><i class="fa fa-heart"></i> Add to Wishlist</a>\n' +
+                    '           <a href="#" class="prod-favorites"><i class="fa fa-heart"></i> Add to Wishlist</a>' +
                     '           <a href="#" class="prod-compare"><i class="fa fa-bar-chart"></i> Compare</a>' +
                     '       </p>' +
                     '       <div class="prod-skuwrap">' +
                     '           <p class="prod-skuttl">Color</p>' +
-                    '                <ul class="prod-skucolor">' +
-                    '                    <li class="active">' +
-                    '                        <img src="/home/img/color/blue.jpg" alt="">' +
-                    '                    </li>' +
-                    '                    <li>' +
-                    '                        <img src="/home/img/color/red.jpg" alt="">' +
-                    '                    </li>' +
-                    '                    <li>' +
+                    '               <ul class="prod-skucolor">' +
+                    '                  <li class="active">' +
+                    '                      <img src="/home/img/color/blue.jpg" alt="">' +
+                    '                  </li>' +
+                    '                  <li>' +
+                    '                      <img src="/home/img/color/red.jpg" alt="">' +
+                    '                  </li>' +
+                    '                  <li>' +
                     '                        <img src="/home/img/color/green.jpg" alt="">' +
-                    '                    </li>' +
-                    '                    <li>' +
+                    '                  </li>' +
+                    '                  <li>' +
                     '                        <img src="/home/img/color/yellow.jpg" alt="">' +
-                    '                    </li>' +
-                    '                    <li>' +
+                    '                  </li>' +
+                    '                  <li>' +
                     '                        <img src="/home/img/color/purple.jpg" alt="">' +
-                    '                    </li>' +
-                    '                 </ul>' +
-                    '                 <p class="prod-skuttl">Sizes</p>' +
-                    '                 <div class="offer-props-select">' +
-                    '                     <p>XL</p>' +
-                    '                     <ul>' +
+                    '                  </li>' +
+                    '               </ul>' +
+                    '               <p class="prod-skuttl">Sizes</p>' +
+                    '               <div class="offer-props-select">' +
+                    '                   <p>XL</p>' +
+                    '                   <ul>' +
                     '                         <li><a href="#">XS</a></li>' +
                     '                         <li><a href="#">S</a></li>' +
                     '                         <li><a href="#">M</a></li>' +
@@ -61,18 +70,18 @@ $(document).ready(function () {
                     '                         <li><a href="#">L</a></li>' +
                     '                         <li><a href="#">4XL</a></li>' +
                     '                         <li><a href="#">XXL</a></li>' +
-                    '                      </ul>' +
-                    '                    </div>' +
-                    '                    </div>' +
-                    '                    <div class="prod-info">\n' +
-                    '                        <p class="prod-price">\n' +
-                    '                            <b class="item_current_price">$238</b>\n' +
-                    '                        </p>\n' +
-                    '                        <p class="prod-qnt">\n' +
-                    '                            <input type="text" value="1">\n' +
+                    '                     </ul>' +
+                    '                  </div>' +
+                    '                  </div>' +
+                    '                    <div class="prod-info">' +
+                    '                        <p class="prod-price">' +
+                    '                            <b class="item_current_price">'+ response.unit_price +'đ </b>' +
+                    '                        </p>' +
+                    '                        <p class="prod-qnt">' +
+                    '                            <input type="text" value="1">' +
                     '                            <a href="#" class="prod-plus"><i class="fa fa-angle-up"></i></a>\n' +
                     '                            <a href="#" class="prod-minus"><i class="fa fa-angle-down"></i></a>\n' +
-                    '                        </p>\n' +
+                    '                        </p>' +
                     '                        <p class="prod-addwrap">\n' +
                     '                            <a href="#" class="prod-add">Add to cart</a>\n' +
                     '                        </p>\n' +
