@@ -38,7 +38,7 @@ class HomeController extends Controller
         $productDetail = DB::table('products')
             ->select('*')->where('product_id', '=', $productId)->first();
         $imgProducts   = DB::table('images')
-            ->select('img_name')
+            ->select('img_name', 'img_id')
             ->where('product_id', '=', $productId)
             ->get();
         $allProductDetail['product'] = $productDetail;
