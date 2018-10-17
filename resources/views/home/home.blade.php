@@ -58,18 +58,18 @@
                         @foreach($products as $items)
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="#" class="prod-i-img"><img src="/page/image/product/{{$items->image}}" alt="Aspernatur excepturi rem"></a>
+                                <a href="{{ route('detail', $items->title_sale) }}" class="prod-i-img"><img src="/page/image/product/{{$items->image}}" alt="Aspernatur excepturi rem"></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Yêu thích</span><i class="fa fa-heart"></i></a>
                                     <a href="#" data-product-id='{{ $items->product_id }}' class="qview-btn prod-i-qview"><span>Chi tiết</span><i class="fa fa-search"></i></a>
                                     <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
-                                    <a href="#" class="prod-i-add">Xem chi tiết</a>
+                                    <a href="{{ route('detail', $items->title_sale) }}" class="prod-i-add">Xem chi tiết</a>
                                 </p>
                             </div>
                             <h3>
-                                <a href="product.html">{{ $items->title }}</a>
+                                <a href="{{ route('detail', $items->title_sale) }}">{{ $items->title }}</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>{{ number_format($items->unit_price)}}đ</b>
@@ -90,18 +90,20 @@
                         @foreach($productsWoment as $items)
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="/page/image/product/{{$items->image}}" alt="Aspernatur excepturi rem"><!-- NO SPACE --></a>
+                                <a href="{{ route('detail', $items->title_sale) }}" class="prod-i-img">
+                                    <img src="/page/image/product/{{$items->image}}" alt="Aspernatur excepturi rem">
+                                </a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
                                     <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
                                     <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
-                                    <a href="#" class="prod-i-add">Go to detail</a>
+                                    <a href="{{ route('detail', $items->title_sale) }}" class="prod-i-add">Go to detail</a>
                                 </p>
                             </div>
                             <h3>
-                                <a href="#">{{ $items->title }}</a>
+                                <a href="{{ route('detail', $items->title_sale) }}">{{ $items->title }}</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>{{ number_format($items->unit_price)}}đ</b>
@@ -122,7 +124,7 @@
                         @foreach($productsMen as $items)
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><img src="/page/image/product/{{$items->image}}" alt="Amet tempore unde"></a>
+                                <a href="{{ route('detail', $items->title_sale) }}" class="prod-i-img"><img src="/page/image/product/{{$items->image}}" alt="Amet tempore unde"></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
                                     <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
@@ -133,7 +135,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="#">{{ $items->title }}</a>
+                                <a href="{{ route('detail', $items->title_sale) }}">{{ $items->title }}</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>{{ number_format($items->unit_price)}}đ</b>
@@ -148,7 +150,7 @@
                         @foreach($productsKids as $items)
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="/page/image/product/{{$items->image}}" alt="Nisi provident atque"><!-- NO SPACE --></a>
+                                <a href="{{ route('detail', $items->title_sale) }}" class="prod-i-img"><!-- NO SPACE --><img src="/page/image/product/{{$items->image}}" alt="Nisi provident atque"><!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
                                     <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
@@ -159,7 +161,7 @@
                                 </p>
                             </div>
                             <h3>
-                                <a href="#">{{ $items->title }}</a>
+                                <a href="{{ route('detail', $items->title_sale) }}">{{ $items->title }}</a>
                             </h3>
                             <p class="prod-i-price">
                                 <b>{{ number_format($items->unit_price)}}đ</b>

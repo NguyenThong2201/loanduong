@@ -6,62 +6,32 @@
 
 		<ul class="b-crumbs">
 			<li>
-				<a href="index.html">
-					Home
-				</a>
+				<a href="index.html">Home</a>
 			</li>
 			<li>
-				<a href="catalog-list.html">
-					Catalog
-				</a>
+				<a href="catalog-list.html">Catalog</a>
 			</li>
 			<li>
-				<a href="catalog-list.html">
-					Women
-				</a>
+				<a href="catalog-list.html">Women</a>
 			</li>
 			<li>
 				<span>Aperiam nihil veniam</span>
 			</li>
 		</ul>
-		<h1 class="main-ttl"><span>Aperiam nihil veniam</span></h1>
+		<h1 class="main-ttl"><span>{{ $productDetail->title }}</span></h1>
 		<!-- Single Product - start -->
 		<div class="prod-wrap">
-
 			<!-- Product Images -->
 			<div class="prod-slider-wrap">
 				<div class="prod-slider">
 					<ul class="prod-slider-car">
+						@foreach($imgDetail as $item)
 						<li>
 							<a data-fancybox-group="product" class="fancy-img" href="http://placehold.it/500x642">
-								<img src="http://placehold.it/500x642" alt="">
+								<img src="/page/image/product/{{ $item->img_name }}" alt="">
 							</a>
 						</li>
-						<li>
-							<a data-fancybox-group="product" class="fancy-img" href="http://placehold.it/500x722">
-								<img src="http://placehold.it/500x722" alt="">
-							</a>
-						</li>
-						<li>
-							<a data-fancybox-group="product" class="fancy-img" href="http://placehold.it/500x722">
-								<img src="http://placehold.it/500x722" alt="">
-							</a>
-						</li>
-						<li>
-							<a data-fancybox-group="product" class="fancy-img" href="http://placehold.it/500x722">
-								<img src="http://placehold.it/500x722" alt="">
-							</a>
-						</li>
-						<li>
-							<a data-fancybox-group="product" class="fancy-img" href="http://placehold.it/500x722">
-								<img src="http://placehold.it/500x722" alt="">
-							</a>
-						</li>
-						<li>
-							<a data-fancybox-group="product" class="fancy-img" href="http://placehold.it/500x722">
-								<img src="http://placehold.it/500x722" alt="">
-							</a>
-						</li>
+						@endforeach
 						<li>
 							<a data-fancybox-group="product" class="fancy-img" href="http://placehold.it/500x722">
 								<img src="http://placehold.it/500x722" alt="">
@@ -76,11 +46,13 @@
 				</div>
 				<div class="prod-thumbs">
 					<ul class="prod-thumbs-car">
+						@foreach($imgDetail as $item)
 						<li>
 							<a data-slide-index="0" href="#">
-								<img src="http://placehold.it/500x642" alt="">
+								<img src="/page/image/product/{{ $item->img_name }}" alt="">
 							</a>
 						</li>
+						@endforeach
 						<li>
 							<a data-slide-index="1" href="#">
 								<img src="http://placehold.it/500x722" alt="">
@@ -91,31 +63,6 @@
 								<img src="http://placehold.it/500x722" alt="">
 							</a>
 						</li>
-						<li>
-							<a data-slide-index="3" href="#">
-								<img src="http://placehold.it/500x722" alt="">
-							</a>
-						</li>
-						<li>
-							<a data-slide-index="4" href="#">
-								<img src="http://placehold.it/500x722" alt="">
-							</a>
-						</li>
-						<li>
-							<a data-slide-index="5" href="#">
-								<img src="http://placehold.it/500x722" alt="">
-							</a>
-						</li>
-						<li>
-							<a data-slide-index="6" href="#">
-								<img src="http://placehold.it/500x722" alt="">
-							</a>
-						</li>
-						<li>
-							<a data-slide-index="7" href="#">
-								<img src="http://placehold.it/500x722" alt="">
-							</a>
-						</li>
 					</ul>
 				</div>
 			</div>
@@ -123,7 +70,7 @@
 			<!-- Product Description/Info -->
 			<div class="prod-cont">
 				<div class="prod-cont-txt">
-					Quis temporibus hic reprehenderit explicabo odio earum maxime cupiditate mollitia magni laboriosam illum adipisci, ipsam, repellendus optio esse dolorem incidunt debitis eius voluptate expedita assumenda
+					{{ $productDetail->description }}
 				</div>
 				<p class="prod-actions">
 					<a href="#" class="prod-favorites"><i class="fa fa-heart"></i> Wishlist</a>
@@ -133,19 +80,19 @@
 					<p class="prod-skuttl">Color</p>
 					<ul class="prod-skucolor">
 						<li class="active">
-							<img src="img/color/blue.jpg" alt="">
+							<img src="/home/img/color/blue.jpg" alt="">
 						</li>
 						<li>
-							<img src="img/color/red.jpg" alt="">
+							<img src="/home/img/color/red.jpg" alt="">
 						</li>
 						<li>
-							<img src="img/color/green.jpg" alt="">
+							<img src="/home/img/color/green.jpg" alt="">
 						</li>
 						<li>
-							<img src="img/color/yellow.jpg" alt="">
+							<img src="/home/img/color/yellow.jpg" alt="">
 						</li>
 						<li>
-							<img src="img/color/purple.jpg" alt="">
+							<img src="/home/img/color/purple.jpg" alt="">
 						</li>
 					</ul>
 					<p class="prod-skuttl">CLOTHING SIZES</p>
@@ -164,15 +111,15 @@
 				</div>
 				<div class="prod-info">
 					<p class="prod-price">
-						<b class="item_current_price">$135</b>
+						<b class="item_current_price">{{ number_format($productDetail->unit_price) }}đ</b>
 					</p>
 					<p class="prod-qnt">
-						<input value="1" type="text">
+						<input name="quantity" class="input-quantity" value="1" type="text">
 						<a href="#" class="prod-plus"><i class="fa fa-angle-up"></i></a>
 						<a href="#" class="prod-minus"><i class="fa fa-angle-down"></i></a>
 					</p>
 					<p class="prod-addwrap">
-						<a href="#" class="prod-add" rel="nofollow">Add to cart</a>
+						<a href="#" class="prod-add bnt-add-to-cart" data-product-id="{{ $productDetail->product_id }}" rel="nofollow">Add to cart</a>
 					</p>
 				</div>
 				<ul class="prod-i-props">
@@ -280,7 +227,6 @@
 					</div>
 					<p data-prodtab-num="3" class="prod-tab-mob" data-prodtab="#prod-tab-3">Video</p>
 					<div class="prod-tab prod-tab-video" id="prod-tab-3">
-						<iframe width="853" height="480" src="https://www.youtube.com/embed/kaOVHSkDoPY?rel=0&amp;showinfo=0" allowfullscreen></iframe>
 					</div>
 					<p data-prodtab-num="4" class="prod-tab-mob" data-prodtab="#prod-tab-4">Articles (6)</p>
 					<div class="prod-tab prod-tab-articles" id="prod-tab-4">
@@ -438,14 +384,15 @@
 			<div class="prod-related-car" id="prod-related-car">
 				<ul class="slides">
 					<li class="prod-rel-wrap">
+						@foreach($productByCategory as $item)
 						<div class="prod-rel">
-							<a href="product.html" class="prod-rel-img">
-								<img src="http://placehold.it/300x311" alt="Adipisci aperiam commodi">
+							<a href="{{ route('detail', $item->title_sale) }}" class="prod-rel-img">
+								<img src="/page/image/product/{{$item->image}}" alt="{{ $item->title }}">
 							</a>
 							<div class="prod-rel-cont">
-								<h3><a href="product.html">Adipisci aperiam commodi</a></h3>
+								<h3><a href="{{ route('detail', $item->title_sale) }}">{{ $item->title }}</a></h3>
 								<p class="prod-rel-price">
-									<b>$59</b>
+									<b>{{ number_format($item->unit_price) }}đ</b>
 								</p>
 								<div class="prod-rel-actions">
 									<a title="Wishlist" href="#" class="prod-rel-favorites"><i class="fa fa-heart"></i></a>
@@ -456,70 +403,7 @@
 								</div>
 							</div>
 						</div>
-
-
-
-						<div class="prod-rel">
-							<a href="product.html" class="prod-rel-img">
-								<img src="http://placehold.it/300x366" alt="Nulla numquam obcaecati">
-							</a>
-							<div class="prod-rel-cont">
-								<h3><a href="product.html">Nulla numquam obcaecati</a></h3>
-								<p class="prod-rel-price">
-									<b>$48</b>
-								</p>
-								<div class="prod-rel-actions">
-									<a title="Wishlist" href="#" class="prod-rel-favorites"><i class="fa fa-heart"></i></a>
-									<a title="Compare" href="#" class="prod-rel-compare"><i class="fa fa-bar-chart"></i></a>
-									<p class="prod-i-addwrap">
-										<a title="Add to cart" href="#" class="prod-i-add"><i class="fa fa-shopping-cart"></i></a>
-									</p>
-								</div>
-							</div>
-						</div>
-
-
-
-						<div class="prod-rel">
-							<a href="product.html" class="prod-rel-img">
-								<img src="http://placehold.it/370x300" alt="Dignissimos eaque earum">
-							</a>
-							<div class="prod-rel-cont">
-								<h3><a href="product.html">Dignissimos eaque earum</a></h3>
-								<p class="prod-rel-price">
-									<b>$37</b>
-								</p>
-								<div class="prod-rel-actions">
-									<a title="Wishlist" href="#" class="prod-rel-favorites"><i class="fa fa-heart"></i></a>
-									<a title="Compare" href="#" class="prod-rel-compare"><i class="fa fa-bar-chart"></i></a>
-									<p class="prod-i-addwrap">
-										<a title="Add to cart" href="#" class="prod-i-add"><i class="fa fa-shopping-cart"></i></a>
-									</p>
-								</div>
-							</div>
-						</div>
-
-
-
-						<div class="prod-rel">
-							<a href="product.html" class="prod-rel-img">
-								<img src="http://placehold.it/300x345" alt="Porro quae quasi">
-							</a>
-							<div class="prod-rel-cont">
-								<h3><a href="product.html">Porro quae quasi</a></h3>
-								<p class="prod-rel-price">
-									<b>$85</b>
-								</p>
-								<div class="prod-rel-actions">
-									<a title="Wishlist" href="#" class="prod-rel-favorites"><i class="fa fa-heart"></i></a>
-									<a title="Compare" href="#" class="prod-rel-compare"><i class="fa fa-bar-chart"></i></a>
-									<p class="prod-i-addwrap">
-										<a title="Add to cart" href="#" class="prod-i-add"><i class="fa fa-shopping-cart"></i></a>
-									</p>
-								</div>
-							</div>
-						</div>
-
+						@endforeach
 					</li>
 					<li class="prod-rel-wrap">
 						<div class="prod-rel">

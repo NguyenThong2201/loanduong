@@ -124,4 +124,24 @@ $(document).ready(function () {
             }
         })
 	});
+
+    $('.bnt-add-to-cart').on('click', function () {
+        let product_id = $(this).data("product-id");
+        let quantity   = $('.input-quantity').val();
+        $.ajax({
+            url: '/addCartAjax',
+            type: 'GET',
+            dataType: 'json',
+            data: {
+                'product_id': product_id,
+                'quantity'  : quantity
+            },
+            success: function (response) {
+                console.log(response);
+                let html = '';
+                html += response;
+                $(".total-cart").html(html);
+            }
+        })
+    });
 });

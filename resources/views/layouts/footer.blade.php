@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="companyinfo">
                     <a href="index.html">
-                        <img src="img/logo-b.png" alt="AllStore - MultiConcept eCommerce Responsive HTML5 Template">
+                        <img src="/home/img/logo-b.png" alt="AllStore - MultiConcept eCommerce Responsive HTML5 Template">
                         AllStore - MultiConcept eCommerce Responsive HTML5 Template
                     </a>
                 </div>
@@ -90,7 +90,7 @@
                     </div>
                 </div>
                 <div class="f-delivery">
-                    <img src="img/map.png" alt="">
+                    <img src="/home/img/map.png" alt="">
                     <h4>Free delivery in London</h4>
                     <p>We will deliver within 1 hour</p>
                 </div>

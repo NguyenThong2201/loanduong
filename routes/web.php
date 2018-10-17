@@ -12,9 +12,11 @@
 */
 
 Route::get('/', 'HomeController@index')->name('home');
+Route::get('/trang-chu', 'HomeController@index')->name('home');
 Route::get('/category', 'HomeController@category')->name('category');
-Route::get('/detail', 'HomeController@detail')->name('detail');
+Route::get('/chi-tiet/{title_sale}', 'HomeController@detail')->name('detail');
 Route::get('/getDetailAjax', 'HomeController@getDetailAjax')->name('getDetailAjax');
+Route::get('/addCartAjax', 'OrderController@addCartAjax')->name('addCartAjax');
 Auth::routes();
 Route::group(['prefix'=>'admin'],function(){
     Route::get('dashboard',[

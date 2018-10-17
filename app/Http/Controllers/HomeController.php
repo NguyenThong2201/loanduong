@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Images;
 use App\Product;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Http\Request;
+use Session;
 
 class HomeController extends Controller
 {
@@ -29,8 +28,22 @@ class HomeController extends Controller
         return view('home.home', compact('products', 'productsWoment', 'productsMen', 'productsKids'));
     }
 
-    public function getDetail(){
-
+    public function detail($titleSale){
+        $productDetail = Product::where('active', '=', 1)
+            ->where('title_sale', '=', $titleSale)
+            ->first();
+        $imgDetail = DB::table('images')
+            ->select('img_name')
+            ->where('product_id', '=', $productDetail->product_id)
+            ->get();
+        $productByCategory = DB::table('products')
+            ->select('*')
+            ->where('category_id', '=', $productDetail->category_id)
+            ->get();
+        if ($productDetail == NULL) {
+            abort(404);
+        }
+        return view('home.detail', compact('productDetail', 'imgDetail', 'productByCategory'));
     }
     public function getDetailAjax(){
         $productId = $_GET['product_id'];

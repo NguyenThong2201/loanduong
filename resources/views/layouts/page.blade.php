@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
     <title>AllStore - MultiConcept eCommerce Template</title>
-
-    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700ii%7CRoboto:300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic" rel="stylesheet">
-
+    <link rel="stylesheet" href="{{ asset('home/css/css.css') }}">
     <link rel="stylesheet" href="{{ asset('home/css/font-awesome.min.css') }}">
     <link rel="stylesheet" href="{{ asset('home/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('home/css/ion.rangeSlider.css') }}">
@@ -53,8 +51,6 @@
 <script src="{{ asset('home/js/plugins.js') }}"></script>
 <script src="{{ asset('home/js/main.js') }}"></script>
 <script src="{{ asset('js/products.js') }}"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhAYvx0GmLyN5hlf6Uv_e9pPvUT3YpozE"></script>
-<script src="{{ asset('home/js/gmap.js') }}"></script>
 <!-- jQuery plugins/scripts - end -->
 
 </body>

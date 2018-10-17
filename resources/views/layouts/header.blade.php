@@ -46,7 +46,7 @@
     <div class="header-middle">
         <div class="container header-middle-cont">
             <div class="toplogo">
-                <a href="index.html">
+                <a href="{{ route('home') }}">
                     <img src="/home/img/logo.png" alt="AllStore - MultiConcept eCommerce Template">
                 </a>
             </div>
@@ -83,7 +83,7 @@
                             <a href="cart.html">
                                 <i class="fa fa-shopping-cart"></i>
                                 <span class="shop-menu-ttl">Cart</span>
-                                (<b>0</b>)
+                                (<b class="total-cart">0</b>)
                             </a>
                         </div>
                     </li>
