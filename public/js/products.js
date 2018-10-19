@@ -121,6 +121,36 @@ $(document).ready(function () {
                     '      </ul>' +
                     ' </div>';
                 $(".modal-quick-view-detail").html(html);
+                // Quick View button
+                $('.qview-btn').fancybox({
+                    content: $('.qview-modal'),
+                    padding: 0,
+                    helpers : {
+                        overlay : {
+                            locked  : false
+                        }
+                    }
+                });
+
+                // Product Images Slider
+                if ($('.prod-slider-car').length > 0) {
+                    $('.prod-slider-car').each(function () {
+                        $(this).bxSlider({
+                            pagerCustom: $(this).parents('.prod-slider-wrap').find('.prod-thumbs-car'),
+                            adaptiveHeight: true,
+                            infiniteLoop: false,
+                        });
+                        $(this).parents('.prod-slider-wrap').find('.prod-thumbs-car').bxSlider({
+                            slideWidth: 5000,
+                            slideMargin: 8,
+                            moveSlides: 1,
+                            infiniteLoop: false,
+                            minSlides: 5,
+                            maxSlides: 5,
+                            pager: false,
+                        });
+                    });
+                }
             }
         })
 	});
@@ -128,6 +158,7 @@ $(document).ready(function () {
     $('.bnt-add-to-cart').on('click', function () {
         let product_id = $(this).data("product-id");
         let quantity   = $('.input-quantity').val();
+        let totalCart      = 0;
         $.ajax({
             url: '/addCartAjax',
             type: 'GET',
@@ -137,10 +168,8 @@ $(document).ready(function () {
                 'quantity'  : quantity
             },
             success: function (response) {
-                console.log(response);
-                let html = '';
-                html += response;
-                $(".total-cart").html(html);
+                totalCart += quantity;
+                $(".total-cart").html(totalCart);
             }
         })
     });
