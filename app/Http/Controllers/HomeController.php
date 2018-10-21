@@ -58,4 +58,8 @@ class HomeController extends Controller
         $allProductDetail['listImg'] = $imgProducts;
         return json_encode($allProductDetail);
     }
+
+    public function category(){
+        return view('home.category');
+    }
 }

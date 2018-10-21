@@ -67,23 +67,37 @@
                             <span class="shop-menu-ttl">Compare</span> (5)
                         </a>
                     </li>
-
+                    @if(Auth::check())
                     <li class="topauth">
-                        <a href="auth.html">
+                        <a href="#">
+                            <span class="shop-menu-ttl">{{Auth::user()->name}}</span>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-lock"></i>
+                            <span class="shop-menu-ttl">Logout</span>
+                        </a>
+                    </li>
+                    @else
+                    <li class="topauth">
+                        <a href="{{ route('login') }}">
+                            <span class="shop-menu-ttl">Login</span>
+                        </a>
+                        <a href="{{ route('register') }}">
                             <i class="fa fa-lock"></i>
                             <span class="shop-menu-ttl">Registration</span>
                         </a>
-                        <a href="auth.html">
-                            <span class="shop-menu-ttl">Login</span>
-                        </a>
                     </li>
-
+                    @endif
                     <li>
                         <div class="h-cart">
                             <a href="cart.html">
                                 <i class="fa fa-shopping-cart"></i>
                                 <span class="shop-menu-ttl">Cart</span>
+                                @if(session()->has('cartNew'))
+                                (<b class="total-cart">{{ session()->get('cartNew.quantity') }}</b>)
+                                @else
                                 (<b class="total-cart">0</b>)
+                                @endif
                             </a>
                         </div>
                     </li>

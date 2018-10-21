@@ -169,7 +169,7 @@ $(document).ready(function () {
             },
             success: function (response) {
                 totalCart += quantity;
-                $(".total-cart").html(totalCart);
+                $(".total-cart").html(response);
             }
         })
     });
