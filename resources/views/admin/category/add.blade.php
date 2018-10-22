@@ -63,6 +63,27 @@
                                     </div>
                                 </div>
                                 <div class="control-group">
+                                    <label class="control-label" for="optionsCheckbox">Dành Cho</label>
+                                    <div class="controls">
+                                        <label class="radio-inline">
+                                            <input class="uniform_on" type="radio" name="sex" value="2" checked  type="checkbox">
+                                            Nam
+                                        </label>
+                                        <label class="radio-inline">
+                                            <input class="uniform_on" type="radio" name="sex" value="1" type="checkbox">
+                                            Nữ
+                                        </label>
+                                        <label class="radio-inline">
+                                            <input class="uniform_on" type="radio" name="sex" value="3" type="checkbox">
+                                            Cả nam - nữ
+                                        </label>
+                                        <label class="radio-inline">
+                                            <input class="uniform_on" type="radio" name="sex" value="0" type="checkbox">
+                                            Trẻ em
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="control-group">
                                     <label class="control-label" for="textarea2">Ghi chủ <span class="required">*</span></label>
                                     <div class="controls">
                                         <textarea class="input-xlarge textarea" name="description" placeholder="Enter text ..." style="width: 750px; height: 200px">{{old('description')}}</textarea>

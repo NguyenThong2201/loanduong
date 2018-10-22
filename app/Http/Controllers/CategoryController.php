@@ -29,6 +29,7 @@ class CategoryController extends Controller
         $custom   = new Custom;
         $category->title = $request->title;
         $category->title_sale = $custom->convert_vi_to_en($request->title);
+        $category->sex = $request->sex;
         $category->description = $request->description;
         $category->save();
         return redirect()->back()->with('success','Thêm loại thành công !');

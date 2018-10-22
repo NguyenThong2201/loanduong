@@ -123,82 +123,15 @@
                             </a>
                             <i class="fa fa-angle-right"></i>
                             <ul>
-                                <li>
-                                    <a href="catalog-list.html">
-                                        Quần Jen
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="catalog-list.html">
-                                        Đầm Dạ Hội
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="catalog-list.html">
-                                        Áo Thun
-                                    </a>
-                                    <i class="fa fa-angle-right"></i>
-                                    <ul>
+                                @foreach($listCategory as $items)
+                                    @if($items->sex == 1 || $items->sex == 3)
                                         <li>
-                                            <a href="catalog-list.html">
-                                                Áo Thun Tay Ngắn
+                                            <a href="{{ route('category', $items->title_sale) }}">
+                                                {{ $items->title }}
                                             </a>
                                         </li>
-                                        <li>
-                                            <a href="catalog-list.html">
-                                                Áo Thun Tay Dài
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="catalog-list.html">
-                                                Áo Thun Cặp
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="catalog-list.html">
-                                                Clutches
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="catalog-list.html">
-                                                Travel Bags
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="catalog-list.html">
-                                        Giày
-                                    </a>
-                                    <i class="fa fa-angle-right"></i>
-                                    <ul>
-                                        <li>
-                                            <a href="catalog-list.html">
-                                                Fazila
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="catalog-list.html">
-                                                Tech Cases
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="catalog-list.html">
-                                                Jewelry
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="catalog-list.html">
-                                                Stella
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="catalog-list.html">
-                                        Áo Khoác
-                                    </a>
-                                </li>
+                                    @endif
+                                @endforeach
                             </ul>
                         </li>
                         <li>
@@ -207,49 +140,15 @@
                             </a>
                             <i class="fa fa-angle-right"></i>
                             <ul>
-                                <li>
-                                    <a href="catalog-list.html">
-                                        Jackets & Blazers
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="catalog-list.html">
-                                        Pants & Shorts
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="catalog-list.html">
-                                        Accessories
-                                    </a>
-                                    <i class="fa fa-angle-right"></i>
-                                    <ul>
+                                @foreach($listCategory as $items)
+                                    @if($items->sex == 2 || $items->sex == 3)
                                         <li>
-                                            <a href="catalog-list.html">
-                                                Bags
+                                            <a href="{{ route('category', $items->title_sale) }}">
+                                                {{ $items->title }}
                                             </a>
                                         </li>
-                                        <li>
-                                            <a href="catalog-list.html">
-                                                Sunglasses
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="catalog-list.html">
-                                                Other Accessories
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="catalog-list.html">
-                                        Suiting
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="catalog-list.html">
-                                        Shirts
-                                    </a>
-                                </li>
+                                    @endif
+                                @endforeach
                             </ul>
                         </li>
                         <li>
@@ -258,115 +157,15 @@
                             </a>
                             <i class="fa fa-angle-right"></i>
                             <ul>
-                                <li>
-                                    <a href="catalog-list.html">
-                                        Girls
-                                    </a>
-                                    <i class="fa fa-angle-right"></i>
-                                    <ul>
+                                @foreach($listCategory as $items)
+                                    @if($items->sex == 0)
                                         <li>
-                                            <a href="catalog-list.html">
-                                                Outerwear
+                                            <a href="{{ route('category', $items->title_sale) }}">
+                                                {{ $items->title }}
                                             </a>
                                         </li>
-                                        <li>
-                                            <a href="catalog-list.html">
-                                                T-Shirts
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="catalog-list.html">
-                                                Blouses & Shirts
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="catalog-list.html">
-                                                Pants & Shorts
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="catalog-list.html">
-                                                Sleepwear & Underwear
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="catalog-list.html">
-                                                Skirts
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="catalog-list.html">
-                                        Boys
-                                    </a>
-                                    <i class="fa fa-angle-right"></i>
-                                    <ul>
-                                        <li>
-                                            <a href="catalog-list.html">
-                                                Shoes & Accessories
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="catalog-list.html">
-                                                Jumpers & Cardigans
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="catalog-list.html">
-                                                Shirts
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="catalog-list.html">
-                                                Outerwear
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="catalog-list.html">
-                                                Swimwear
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="catalog-list.html">
-                                        Baby
-                                    </a>
-                                    <i class="fa fa-angle-right"></i>
-                                    <ul>
-                                        <li>
-                                            <a href="catalog-list.html">
-                                                Baby Sets
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="catalog-list.html">
-                                                Dresses & All-In-One
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="catalog-list.html">
-                                                Pants & Shorts
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="catalog-list.html">
-                                                Shoes & Accessories
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="catalog-list.html">
-                                                T-shirts
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="catalog-list.html">
-                                                Outerwear
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
+                                    @endif
+                                @endforeach
                             </ul>
                         </li>
                         <li>
@@ -507,31 +306,13 @@
                             Category <i class="fa fa-angle-down"></i>
                         </a>
                         <ul class="sub-menu">
-                            <li>
-                                <a href="catalog-list.html">
-                                    Thời Trang Nam
-                                </a>
-                            </li>
-                            <li>
-                                <a href="catalog-list-2.html">
-                                    Thời Trang Nữ
-                                </a>
-                            </li>
-                            <li>
-                                <a href="catalog-gallery.html">
-                                    Trẻ Em
-                                </a>
-                            </li>
-                            <li>
-                                <a href="catalog-gallery-2.html">
-                                    Tui
-                                </a>
-                            </li>
-                            <li>
-                                <a href="catalog-table.html">
-                                    Catalog Table
-                                </a>
-                            </li>
+                            @foreach($listCategory as $items)
+                                <li>
+                                    <a href="{{ route('category', $items->title_sale) }}">
+                                        {{ $items->title }}
+                                    </a>
+                                </li>
+                            @endforeach
                         </ul>
                     </li>
                     <li class="menu-item-has-children">

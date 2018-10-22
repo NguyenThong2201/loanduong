@@ -88,7 +88,19 @@
                                               Trẻ em
                                           </label>
                                     </div>
+                                </div><div class="control-group">
+                                    <label class="control-label" for="optionsCheckbox">Hiện thị</label>
+                                    <div class="controls">
+                                        <label class="uniform">
+                                            <div>
+                                                <span>
+                                                    <input class="uniform_on" name="active" type="checkbox" value="1">
+                                                </span>
+                                            </div>
+                                        </label>
+                                    </div>
                                 </div>
+
                                 <div class="control-group">
                                     <label class="control-label" for="typeahead">Giá Bán <span class="required">*</span></label>
                                     <div class="controls">
@@ -102,7 +114,7 @@
                                     </div>
                                 </div>
                                 <div class="control-group">
-                                    <label class="control-label" for="typeahead">Sổ lượng <span class="required">*</span></label>
+                                    <label class="control-label" for="typeahead">Sổ lượng hiện có <span class="required">*</span></label>
                                     <div class="controls">
                                         <input type="text" class="span6" name="unit" value="{{old('unit')}}" placeholder="Sổ lượng" />
                                     </div>

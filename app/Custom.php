@@ -16,6 +16,7 @@ class Custom
         $str = preg_replace("/(ỳ|ý|ỵ|ỷ|ỹ|Ỳ|Ý|Ỵ|Ỷ|Ỹ)/", 'y', $str);
         $str = preg_replace("/(đ|Đ)/", 'd', $str);
         $str = str_replace(" ", '-', str_replace("&*#39;","",$str));
+        $str = strtolower($str);
         return $str;
     }
 }

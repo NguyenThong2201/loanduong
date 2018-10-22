@@ -59,7 +59,14 @@ class HomeController extends Controller
         return json_encode($allProductDetail);
     }
 
-    public function category(){
-        return view('home.category');
+    public function category($titleSale){
+        $category = DB::table('category')
+            ->select('category_id')
+            ->where('title_sale', '=', $titleSale)->first();
+        $categoryId = $category->category_id;
+        $productByCategory = DB::table('products')
+            ->select('*')
+            ->where('category_id', '=', $categoryId)->get();
+        return view('home.category', compact('productByCategory'));
     }
 }
