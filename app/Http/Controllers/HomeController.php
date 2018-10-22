@@ -32,6 +32,9 @@ class HomeController extends Controller
         $productDetail = Product::where('active', '=', 1)
             ->where('title_sale', '=', $titleSale)
             ->first();
+        if ($productDetail == NULL) {
+            abort(404);
+        }
         $imgDetail = DB::table('images')
             ->select('img_name')
             ->where('product_id', '=', $productDetail->product_id)
@@ -40,9 +43,6 @@ class HomeController extends Controller
             ->select('*')
             ->where('category_id', '=', $productDetail->category_id)
             ->get();
-        if ($productDetail == NULL) {
-            abort(404);
-        }
         return view('home.detail', compact('productDetail', 'imgDetail', 'productByCategory'));
     }
     public function getDetailAjax(){
@@ -63,6 +63,9 @@ class HomeController extends Controller
         $category = DB::table('category')
             ->select('category_id')
             ->where('title_sale', '=', $titleSale)->first();
+        if ($category == NULL) {
+            abort(404);
+        }
         $categoryId = $category->category_id;
         $productByCategory = DB::table('products')
             ->select('*')

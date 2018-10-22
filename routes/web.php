@@ -17,6 +17,7 @@ Route::get('/category/{title_sale}', 'HomeController@category')->name('category'
 Route::get('/chi-tiet/{title_sale}', 'HomeController@detail')->name('detail');
 Route::get('/getDetailAjax', 'HomeController@getDetailAjax')->name('getDetailAjax');
 Route::get('/addCartAjax', 'OrderController@addCartAjax')->name('addCartAjax');
+Route::get('/gio-hang', 'OrderController@cartTop')->name('cartTop');
 Auth::routes();
 Route::group(['prefix'=>'admin'],function(){
     Route::get('dashboard',[

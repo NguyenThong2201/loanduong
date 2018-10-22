@@ -5,36 +5,36 @@
         <div class="container">
             <ul class="contactinfo nav nav-pills">
                 <li>
-                    <i class='fa fa-phone'></i> +7 777 123 1575
+                    <i class='fa fa-phone'></i> +0977970263
                 </li>
                 <li>
-                    <i class="fa fa-envelope"></i> admin@real-web.pro
+                    <i class="fa fa-envelope"></i> nbthong2201@gmail.com
                 </li>
             </ul>
             <!-- Social links -->
             <ul class="social-icons nav navbar-nav">
                 <li>
-                    <a href="http://facebook.com" rel="nofollow" target="_blank">
+                    <a href="#" rel="nofollow" target="_blank">
                         <i class="fa fa-facebook"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="http://google.com" rel="nofollow" target="_blank">
+                    <a href="#" rel="nofollow" target="_blank">
                         <i class="fa fa-google-plus"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="http://twitter.com" rel="nofollow" target="_blank">
+                    <a href="#" rel="nofollow" target="_blank">
                         <i class="fa fa-twitter"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="http://vk.com" rel="nofollow" target="_blank">
+                    <a href="#" rel="nofollow" target="_blank">
                         <i class="fa fa-vk"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="http://instagram.com" rel="nofollow" target="_blank">
+                    <a href="#" rel="nofollow" target="_blank">
                         <i class="fa fa-instagram"></i>
                     </a>
                 </li>
@@ -90,7 +90,7 @@
                     @endif
                     <li>
                         <div class="h-cart">
-                            <a href="cart.html">
+                            <a href="{{ route('cartTop') }}">
                                 <i class="fa fa-shopping-cart"></i>
                                 <span class="shop-menu-ttl">Cart</span>
                                 @if(session()->has('cartNew'))
