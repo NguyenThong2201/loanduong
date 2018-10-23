@@ -17,7 +17,8 @@ class ProductController extends Controller
         return view('admin.dashboard.dashboard');
     }
     public function getProduct(){
-        return view('admin.product.list');
+        $dssanpham = Product::all();
+        return view('admin.product.list', compact('dssanpham'));
     }
     public function getAddProduct(){
         $category = Category::all();

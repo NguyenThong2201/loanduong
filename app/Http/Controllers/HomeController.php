@@ -36,7 +36,7 @@ class HomeController extends Controller
             abort(404);
         }
         $imgDetail = DB::table('images')
-            ->select('img_name')
+            ->select('*')
             ->where('product_id', '=', $productDetail->product_id)
             ->get();
         $productByCategory = DB::table('products')
@@ -60,16 +60,22 @@ class HomeController extends Controller
     }
 
     public function category($titleSale){
-        $category = DB::table('category')
+        if ($titleSale == 1 || $titleSale == 2) {
+            $productByCategory = DB::table('products')
+            ->select('*')
+            ->where('sex', '=', $titleSale)->get();
+        }else{
+            $category = DB::table('category')
             ->select('category_id')
             ->where('title_sale', '=', $titleSale)->first();
-        if ($category == NULL) {
-            abort(404);
+            if ($category == NULL) {
+                abort(404);
+            }
+            $categoryId = $category->category_id;
+            $productByCategory = DB::table('products')
+                ->select('*')
+                ->where('category_id', '=', $categoryId)->get();
         }
-        $categoryId = $category->category_id;
-        $productByCategory = DB::table('products')
-            ->select('*')
-            ->where('category_id', '=', $categoryId)->get();
         return view('home.category', compact('productByCategory'));
     }
 }

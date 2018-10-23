@@ -34,7 +34,7 @@
                     </ul>
                 </div>
             </div>
-        </div>
+        </div> 
         <div class="row-fluid">
             <!-- block -->
             <div class="block">
@@ -45,7 +45,7 @@
                     <div class="span12">
                         <div class="table-toolbar">
                             <div class="btn-group">
-                                <a href="{{route('themsanpham')}}"><button class="btn btn-success">Add New <i class="icon-plus icon-white"></i></button></a>
+                                <a href="{{route('addProduct')}}"><button class="btn btn-success">Add New <i class="icon-plus icon-white"></i></button></a>
                             </div>
                             <div class="btn-group pull-right">
                                 <button data-toggle="dropdown" class="btn dropdown-toggle">Tools <span class="caret"></span></button>
@@ -73,25 +73,25 @@
                             <tbody>
                             @foreach($dssanpham as $sp)
                                 <tr class="odd gradeX">
-                                    <td width="80px">{{$sp->id}}</td>
-                                    <td width="230px">{{$sp->name}}</td>
-                                    <td><img src="source/image/product/{{$sp->image}}" height="50px" width="70px">
+                                    <td width="80px">{{$sp->product_id}}</td>
+                                    <td width="230px">{{$sp->title}}</td>
+                                    <td><img src="/page/image/product/{{$sp->image}}" height="50px" width="70px">
                                     </td>
-                                    <td>{{$sp->unit_price}}</td>
-                                    <td>{{$sp->promotion_price}}</td>
+                                    <td>{{number_format($sp->unit_price)}}</td>
+                                    <td>{{number_format($sp->promotion_price)}}</td>
                                     <td>@if($sp->active == 1)
-                                            Đang bán..
+                                            Đang bán...
                                         @else
                                             Ngưng bán
                                         @endif
                                     </td>
                                     <td class="center" width="40px">
-                                        <a href="{{route('suasanpham',$sp->id)}}">
+                                        <a href="">
                                             <button class="btn btn-primary"><i class="icon-pencil icon-white"></i></button>
                                         </a>
                                     </td>
                                     <td class="center" width="40px">
-                                        <a href="{{route('xoasanpham',$sp->id)}}">
+                                        <a href="">
                                             <button class="btn btn-danger"><i class="icon-remove icon-white"></i></button>
                                         </a>
                                     </td>

@@ -27,7 +27,7 @@
 					<ul class="prod-slider-car">
 						@foreach($imgDetail as $item)
 						<li>
-							<a data-fancybox-group="product" class="fancy-img" href="http://placehold.it/500x642">
+							<a data-fancybox-group="product" class="fancy-img" href="/page/image/product/{{ $item->img_name }}">
 								<img src="/page/image/product/{{ $item->img_name }}" alt="">
 							</a>
 						</li>
@@ -48,18 +48,18 @@
 					<ul class="prod-thumbs-car">
 						@foreach($imgDetail as $item)
 						<li>
-							<a data-slide-index="0" href="#">
+							<a data-slide-index="{{ $item->img_id }}" href="javascript:void(0)">
 								<img src="/page/image/product/{{ $item->img_name }}" alt="">
 							</a>
 						</li>
 						@endforeach
 						<li>
-							<a data-slide-index="1" href="#">
+							<a data-slide-index="10" href="javascript:void(0)">
 								<img src="http://placehold.it/500x722" alt="">
 							</a>
 						</li>
 						<li>
-							<a data-slide-index="2" href="#">
+							<a data-slide-index="20" href="javascript:void(0)">
 								<img src="http://placehold.it/500x722" alt="">
 							</a>
 						</li>
@@ -73,8 +73,8 @@
 					{{ $productDetail->description }}
 				</div>
 				<p class="prod-actions">
-					<a href="#" class="prod-favorites"><i class="fa fa-heart"></i> Wishlist</a>
-					<a href="#" class="prod-compare"><i class="fa fa-bar-chart"></i> Compare</a>
+					<a href="javascript:void(0)" class="prod-favorites"><i class="fa fa-heart"></i> Yêu Thích</a>
+					<a href="javascript:void(0)" class="prod-compare"><i class="fa fa-bar-chart"></i> Compare</a>
 				</p>
 				<div class="prod-skuwrap">
 					<p class="prod-skuttl">Color</p>
@@ -99,13 +99,13 @@
 					<div class="offer-props-select">
 						<p>XL</p>
 						<ul>
-							<li><a href="#">XS</a></li>
-							<li><a href="#">S</a></li>
-							<li><a href="#">M</a></li>
-							<li class="active"><a href="#">XL</a></li>
-							<li><a href="#">L</a></li>
-							<li><a href="#">4XL</a></li>
-							<li><a href="#">XXL</a></li>
+							<li><a href="javascript:void(0)">XS</a></li>
+							<li><a href="javascript:void(0)">S</a></li>
+							<li><a href="javascript:void(0)">M</a></li>
+							<li class="active"><a href="javascript:void(0)">XL</a></li>
+							<li><a href="javascript:void(0)">L</a></li>
+							<li><a href="javascript:void(0)">4XL</a></li>
+							<li><a href="javascript:void(0)">XXL</a></li>
 						</ul>
 					</div>
 				</div>
@@ -115,11 +115,11 @@
 					</p>
 					<p class="prod-qnt">
 						<input name="quantity" class="input-quantity" value="1" type="text">
-						<a href="#" class="prod-plus"><i class="fa fa-angle-up"></i></a>
-						<a href="#" class="prod-minus"><i class="fa fa-angle-down"></i></a>
+						<a href="javascript:void(0)" class="prod-plus"><i class="fa fa-angle-up"></i></a>
+						<a href="javascript:void(0)" class="prod-minus"><i class="fa fa-angle-down"></i></a>
 					</p>
 					<p class="prod-addwrap">
-						<a href="#" class="prod-add bnt-add-to-cart" data-product-id="{{ $productDetail->product_id }}" rel="nofollow">Add to cart</a>
+						<a href="javascript:void(0)" class="prod-add bnt-add-to-cart" data-product-id="{{ $productDetail->product_id }}" rel="nofollow">Add to cart</a>
 					</p>
 				</div>
 				<ul class="prod-i-props">

@@ -7,10 +7,10 @@
             <a href=""><i class="icon-chevron-right"></i> Quản Lý Đơn Hàng</a>
         </li>
         <li>
-            <a href=""><i class="icon-chevron-right"></i>Sản Phẩm</a>
+            <a href="{{ route('listProduct') }}"><i class="icon-chevron-right"></i>Sản Phẩm</a>
         </li>
         <li>
-            <a href=""><i class="icon-chevron-right"></i> Loại Sản Phẩm</a>
+            <a href="{{ route('listCategory') }}"><i class="icon-chevron-right"></i> Loại Sản Phẩm</a>
         </li>
         <li>
             <a href=""><i class="icon-chevron-right"></i> QL Tài Khoản</a>

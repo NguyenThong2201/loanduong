@@ -28,11 +28,11 @@ Route::group(['prefix'=>'admin'],function(){
     ]);
     Route::group(['prefix'=>'product'],function(){
         Route::get('list',[
-            'as'=>'listproduct',
+            'as'=>'listProduct',
             'uses'=>'ProductController@getProduct'
         ]);
         Route::get('add',[
-            'as'=>'add',
+            'as'=>'addProduct',
             'uses'=>'ProductController@getAddProduct'
         ]);
         Route::post('add',[
@@ -42,11 +42,11 @@ Route::group(['prefix'=>'admin'],function(){
     });
     Route::group(['prefix'=>'category'],function(){
         Route::get('list',[
-            'as'=>'list',
-            'uses'=>'CategoryController@getCategory'
+            'as'=>'listCategory',
+            'uses'=>'CategoryController@getListCategory'
         ]);
         Route::get('add',[
-            'as'=>'add',
+            'as'=>'addCategory',
             'uses'=>'CategoryController@getAddCategory'
         ]);
         Route::post('add',[

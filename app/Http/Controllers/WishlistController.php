@@ -26,19 +26,17 @@ class WishlistController extends Controller
                 ->where('product_id', '=', $items->product_id)
                 ->first();
         }
-//        echo "<pre>";
-//        print_r($wishList);
-//        foreach ($wishList as $item){
-//            echo $item->products->title_sale;
-//        }
-//        die();
         return view('home.wishlist', compact('wishList'));
     }
     public function addWishlistAjax(){
         $productId = $_GET['product_id'];
+        $userId    = Auth::user()->id;
+        if (empty($userId) == TRUE) {
+            return redirect('/login');
+        }
         $wishList  = new Wishlist;
         $wishList->product_id = $productId;
-        $wishList->user_id = Auth::user()->id;
+        $wishList->user_id = $userId;
         $wishList->save();
         return $productId;
     }

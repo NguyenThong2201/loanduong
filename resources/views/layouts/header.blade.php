@@ -54,10 +54,9 @@
                 <ul>
 
                     <li>
-                        <a href="wishlist.html">
+                        <a href="{{ route('getListWishList') }}">
                             <i class="fa fa-heart"></i>
                             <span class="shop-menu-ttl">Wishlist</span>
-                            (<span id="topbar-favorites">1</span>)
                         </a>
                     </li>
 
@@ -118,7 +117,7 @@
                     <a class="topcatalog-btn" href="catalog-list.html"><span>ALL</span> Category</a>
                     <ul class="topcatalog-list">
                         <li>
-                            <a href="catalog-list.html">
+                            <a href="{{ route('category', 1) }}">
                                 Shop Nữ
                             </a>
                             <i class="fa fa-angle-right"></i>
@@ -135,7 +134,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="catalog-list.html">
+                            <a href="{{ route('category', 2) }}">
                                 Shop Nam
                             </a>
                             <i class="fa fa-angle-right"></i>

@@ -12,7 +12,8 @@ class CategoryController extends Controller
         $this->middleware('auth');
     }
     public function getListCategory(){
-        return view('admin.category.list');
+        $listCategory = Category::all();
+        return view('admin.category.list', compact('listCategory'));
     }
     public function getAddCategory(){
         return view('admin.category.add');
