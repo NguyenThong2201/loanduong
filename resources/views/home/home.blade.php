@@ -60,8 +60,8 @@
                             <div class="prod-i-top">
                                 <a href="{{ route('detail', $items->title_sale) }}" class="prod-i-img"><img src="/page/image/product/{{$items->image}}" alt="Aspernatur excepturi rem"></a>
                                 <p class="prod-i-info">
-                                    <a href="#" class="prod-i-favorites"><span>Yêu thích</span><i class="fa fa-heart"></i></a>
-                                    <a href="#" data-product-id='{{ $items->product_id }}' class="qview-btn prod-i-qview"><span>Chi tiết</span><i class="fa fa-search"></i></a>
+                                    <a href="javascript:void(0)" data-product-id='{{ $items->product_id }}' class="bnt-add-to-wish-list prod-i-favorites"><span>Yêu thích</span><i class="fa fa-heart"></i></a>
+                                    <a href="javascript:void(0)" data-product-id='{{ $items->product_id }}' class="qview-btn prod-i-qview"><span>Chi tiết</span><i class="fa fa-search"></i></a>
                                     <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
@@ -94,9 +94,9 @@
                                     <img src="/page/image/product/{{$items->image}}" alt="Aspernatur excepturi rem">
                                 </a>
                                 <p class="prod-i-info">
-                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
-                                    <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
-                                    <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
+                                    <a href="javascript:void(0)" data-product-id='{{ $items->product_id }}' class="bnt-add-to-wish-list prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="javascript:void(0)" data-product-id='{{ $items->product_id }}' class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a class="prod-i-compare" href="javascript:void(0)"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
                                     <a href="{{ route('detail', $items->title_sale) }}" class="prod-i-add">Go to detail</a>
@@ -126,7 +126,7 @@
                             <div class="prod-i-top">
                                 <a href="{{ route('detail', $items->title_sale) }}" class="prod-i-img"><img src="/page/image/product/{{$items->image}}" alt="Amet tempore unde"></a>
                                 <p class="prod-i-info">
-                                    <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
+                                    <a href="javascript:void(0)" class="bnt-add-to-wish-list prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
                                     <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
                                     <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
                                 </p>

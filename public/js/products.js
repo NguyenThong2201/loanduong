@@ -173,4 +173,24 @@ $(document).ready(function () {
             }
         })
     });
+
+    $('.bnt-add-to-wish-list').on('click', function () {
+        let product_id = $(this).data("product-id");
+        $.ajax({
+            url: '/addWishlistAjax',
+            type: 'GET',
+            dataType: 'json',
+            data: {
+                'product_id': product_id,
+            },
+            success: function (response) {
+                $(".total-car").html(response);
+                window.setTimeout(function() {
+                    $(".alert").fadeTo(500, 0).slideUp(500, function(){
+                        $(this).remove();
+                    });
+                }, 3000);
+            }
+        })
+    });
 });

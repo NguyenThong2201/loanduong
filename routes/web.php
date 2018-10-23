@@ -19,6 +19,8 @@ Route::get('/getDetailAjax', 'HomeController@getDetailAjax')->name('getDetailAja
 Route::get('/addCartAjax', 'OrderController@addCartAjax')->name('addCartAjax');
 Route::get('/gio-hang', 'OrderController@cartTop')->name('cartTop');
 Auth::routes();
+Route::get('/addWishlistAjax', 'WishlistController@addWishlistAjax')->name('addWishlistAjax');
+Route::get('/danh-sach-yeu-thich', 'WishlistController@getListWishList')->name('getListWishList');
 Route::group(['prefix'=>'admin'],function(){
     Route::get('dashboard',[
         'as'=>'dashboard',

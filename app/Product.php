@@ -10,7 +10,7 @@ class Product extends Model
 {
 	protected $table = "products";
 	public function category(){
-		return $this-> belongsTo('App\Category','category_id','category_id');
+		return $this-> belongsTo('App\Category','category_id','product_id');
 	}
 }
 ?>
