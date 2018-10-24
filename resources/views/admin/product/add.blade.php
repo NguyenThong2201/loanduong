@@ -72,19 +72,19 @@
                                     <label class="control-label" for="optionsCheckbox">Dành Cho</label>
                                     <div class="controls">
                                         <label class="radio-inline">
-                                              <input class="uniform_on" type="radio" name="sex" value="2" checked  type="checkbox">
+                                              <input class="uniform_on" type="radio" name="sex" value="2" checked>
                                               Nam
                                           </label>
                                           <label class="radio-inline">
-                                            <input class="uniform_on" type="radio" name="sex" value="1" type="checkbox">
+                                            <input class="uniform_on" type="radio" name="sex" value="1">
                                               Nữ
                                           </label>
                                           <label class="radio-inline">
-                                            <input class="uniform_on" type="radio" name="sex" value="3" type="checkbox">
+                                            <input class="uniform_on" type="radio" name="sex" value="3">
                                               Cả nam - nữ
                                           </label>
                                           <label class="radio-inline">
-                                            <input class="uniform_on" type="radio" name="sex" value="0" type="checkbox">
+                                            <input class="uniform_on" type="radio" name="sex" value="0">
                                               Trẻ em
                                           </label>
                                     </div>

@@ -51,8 +51,8 @@
 <script src="{{ asset('home/js/chosen.jquery.min.js') }}"></script>
 <script src="{{ asset('home/js/jQuery.Brazzers-Carousel.js') }}"></script>
 <script src="{{ asset('home/js/plugins.js') }}"></script>
-<script src="{{ asset('js/products.js') }}"></script>
 <script src="{{ asset('home/js/main.js') }}"></script>
+<script src="{{ asset('js/products.js') }}"></script>
 <!-- jQuery plugins/scripts - end -->
 </body>
 </html>

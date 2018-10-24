@@ -446,24 +446,24 @@ $(window).load(function () {
     // });
 
     // Product Images Slider
-    // if ($('.prod-slider-car').length > 0) {
-    //     $('.prod-slider-car').each(function () {
-    //         $(this).bxSlider({
-    //             pagerCustom: $(this).parents('.prod-slider-wrap').find('.prod-thumbs-car'),
-    //             adaptiveHeight: true,
-    //             infiniteLoop: false,
-    //         });
-    //         $(this).parents('.prod-slider-wrap').find('.prod-thumbs-car').bxSlider({
-    //             slideWidth: 5000,
-    //             slideMargin: 8,
-    //             moveSlides: 1,
-    //             infiniteLoop: false,
-    //             minSlides: 5,
-    //             maxSlides: 5,
-    //             pager: false,
-    //         });
-    //     });
-    // }
+    if ($('.prod-slider-car').length > 0) {
+        $('.prod-slider-car').each(function () {
+            $(this).bxSlider({
+                pagerCustom: $(this).parents('.prod-slider-wrap').find('.prod-thumbs-car'),
+                adaptiveHeight: true,
+                infiniteLoop: false,
+            });
+            $(this).parents('.prod-slider-wrap').find('.prod-thumbs-car').bxSlider({
+                slideWidth: 5000,
+                slideMargin: 8,
+                moveSlides: 1,
+                infiniteLoop: false,
+                minSlides: 5,
+                maxSlides: 5,
+                pager: false,
+            });
+        });
+    }
 
     // Filter
     if ($('.section-filter-ttl').length > 0) {

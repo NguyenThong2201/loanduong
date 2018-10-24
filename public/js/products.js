@@ -134,6 +134,7 @@ $(document).ready(function () {
 
                 // Product Images Slider
                 if ($('.prod-slider-car').length > 0) {
+                    console.log('aaa');
                     $('.prod-slider-car').each(function () {
                         $(this).bxSlider({
                             pagerCustom: $(this).parents('.prod-slider-wrap').find('.prod-thumbs-car'),
@@ -184,6 +185,7 @@ $(document).ready(function () {
                 'product_id': product_id,
             },
             success: function (response) {
+                console.log(response);
                 $(".total-car").html(response);
                 window.setTimeout(function() {
                     $(".alert").fadeTo(500, 0).slideUp(500, function(){

@@ -1,20 +1,16 @@
-@extends('Admin.index')
+@extends('admin.index')
 @section('content')
     <div class="span9" id="content">
         <div class="row-fluid mgT12">
             <div class="navbar">
                 <div class="navbar-inner">
                     <ul class="breadcrumb">
-                        <i class="icon-chevron-left hide-sidebar">
-                            <a href='#' title="Hide Sidebar" rel='tooltip'>&nbsp;</a>
-                        </i>
-                        <i class="icon-chevron-right show-sidebar" style="display:none;">
-                            <a href='#' title="Show Sidebar" rel='tooltip'>&nbsp;</a>
-                        </i>
+                        <i class="icon-chevron-left hide-sidebar"><a href='#' title="Hide Sidebar" rel='tooltip'>&nbsp;</a></i>
+                        <i class="icon-chevron-right show-sidebar" style="display:none;"><a href='#' title="Show Sidebar" rel='tooltip'>&nbsp;</a></i>
                         <li>
-                            <a href="">Danh Sách Loại</a> <span class="divider">/</span>
+                            <a href="">Danh Sách Slide</a> <span class="divider">/</span>
                         </li>
-                        <li class="active">Thêm Loại sản phẩm</li>
+                        <li class="active">Thêm Slide</li>
                     </ul>
                 </div>
             </div>
@@ -40,7 +36,7 @@
             <!-- block -->
             <div class="block">
                 <div class="navbar navbar-inner block-header">
-                    <div class="muted pull-left">Thêm Loại Sản Phẩm</div>
+                    <div class="muted pull-left">Thêm Slide</div>
                 </div>
                 <div class="block-content collapse in">
                     <div class="span12">
@@ -49,7 +45,7 @@
                                 <legend>Form Components</legend>
                                 <input type="hidden" name="_token" value="{{csrf_token()}}">
                                 <div class="control-group">
-                                    <label class="control-label" for="typeahead">Tên Loại Sản Phẩm <span class="required">*</span> </label>
+                                    <label class="control-label" for="typeahead">Tên Slide <span class="required">*</span> </label>
                                     <div class="controls">
                                         <input type="text" class="span6" value="{{old('title')}}" name="title" />
                                     </div>
@@ -67,24 +63,16 @@
                                     </div>
                                 </div>
                                 <div class="control-group">
-                                    <label class="control-label" for="optionsCheckbox">Dành Cho</label>
+                                    <label class="control-label" for="fileInput">Hình Slide <span class="required">*</span></label>
                                     <div class="controls">
-                                        <label class="radio-inline">
-                                            <input class="uniform_on" type="radio" name="sex" value="2" checked>
-                                            Nam
-                                        </label>
-                                        <label class="radio-inline">
-                                            <input class="uniform_on" type="radio" name="sex" value="1">
-                                            Nữ
-                                        </label>
-                                        <label class="radio-inline">
-                                            <input class="uniform_on" type="radio" name="sex" value="3">
-                                            Cả nam - nữ
-                                        </label>
-                                        <label class="radio-inline">
-                                            <input class="uniform_on" type="radio" name="sex" value="0">
-                                            Trẻ em
-                                        </label>
+                                        <input class="input-file uniform_on form-control" type="file" name="img-slide" onchange="image_slide();"/>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <div class="controls">
+                                        <div class="row">
+                                            <div id="image_preview_slide"></div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="control-group">
@@ -106,4 +94,11 @@
             <!-- /block -->
         </div>
     </div>
+@endsection
+@section('script')
+    <script>
+        function image_slide() {
+            $('#image_preview_slide').append("<img src='"+URL.createObjectURL(event.target.files[0])+"' width='750' height='300'>");
+        }
+    </script>
 @endsection

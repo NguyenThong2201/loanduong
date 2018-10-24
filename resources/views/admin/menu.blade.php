@@ -16,7 +16,7 @@
             <a href=""><i class="icon-chevron-right"></i> QL Tài Khoản</a>
         </li>
         <li>
-            <a href="tables.html"><i class="icon-chevron-right"></i> Tables</a>
+            <a href="{{ route('addSlide') }}"><i class="icon-chevron-right"></i> Slide</a>
         </li>
         <li>
             <a href="buttons.html"><i class="icon-chevron-right"></i> Buttons & Icons</a>

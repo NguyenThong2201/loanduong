@@ -29,11 +29,13 @@ class WishlistController extends Controller
         return view('home.wishlist', compact('wishList'));
     }
     public function addWishlistAjax(){
+        die('ok');
         $productId = $_GET['product_id'];
-        $userId    = Auth::user()->id;
-        if (empty($userId) == TRUE) {
-            return redirect('/login');
-        }
+//        $userId    = Auth::user()->id;
+//        $error = 1;
+//        if (empty($userId) == TRUE) {
+//            return $error;
+//        }
         $wishList  = new Wishlist;
         $wishList->product_id = $productId;
         $wishList->user_id = $userId;

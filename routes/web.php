@@ -18,8 +18,8 @@ Route::get('/chi-tiet/{title_sale}', 'HomeController@detail')->name('detail');
 Route::get('/getDetailAjax', 'HomeController@getDetailAjax')->name('getDetailAjax');
 Route::get('/addCartAjax', 'OrderController@addCartAjax')->name('addCartAjax');
 Route::get('/gio-hang', 'OrderController@cartTop')->name('cartTop');
-Auth::routes();
 Route::get('/addWishlistAjax', 'WishlistController@addWishlistAjax')->name('addWishlistAjax');
+Auth::routes();
 Route::get('/danh-sach-yeu-thich', 'WishlistController@getListWishList')->name('getListWishList');
 Route::group(['prefix'=>'admin'],function(){
     Route::get('dashboard',[
@@ -51,6 +51,20 @@ Route::group(['prefix'=>'admin'],function(){
         ]);
         Route::post('add',[
             'as'=>'add',
+            'uses'=>'CategoryController@postAddCategory'
+        ]);
+    });
+    Route::group(['prefix'=>'slide'],function(){
+        Route::get('list',[
+            'as'=>'listSlide',
+            'uses'=>'SlideController@getListSlide'
+        ]);
+        Route::get('add',[
+            'as'=>'addSlide',
+            'uses'=>'SlideController@getAddSlide'
+        ]);
+        Route::post('add',[
+            'as'=>'addSlide',
             'uses'=>'CategoryController@postAddCategory'
         ]);
     });
