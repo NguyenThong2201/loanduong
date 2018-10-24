@@ -71,18 +71,17 @@
                         <a href="#">
                             <span class="shop-menu-ttl">{{Auth::user()->name}}</span>
                         </a>
-                        <a href="#">
-                            <i class="fa fa-lock"></i>
+                        <a href="{{ route('logout') }}">
                             <span class="shop-menu-ttl">Logout</span>
                         </a>
                     </li>
                     @else
                     <li class="topauth">
                         <a href="{{ route('login') }}">
+                            <i class="fa fa-lock"></i>
                             <span class="shop-menu-ttl">Login</span>
                         </a>
                         <a href="{{ route('register') }}">
-                            <i class="fa fa-lock"></i>
                             <span class="shop-menu-ttl">Registration</span>
                         </a>
                     </li>
@@ -320,14 +319,10 @@
                         </a>
                         <ul class="sub-menu">
                             <li>
-                                <a href="product.html">
-                                    Product - Style 1 (Slider)
-                                </a>
+                                <a href="#">Quần áo</a>
                             </li>
                             <li>
-                                <a href="product-2.html">
-                                    Product - Style 2 (Scroll)
-                                </a>
+                                <a href="#">Giày dép</a>
                             </li>
                         </ul>
                     </li>
@@ -342,19 +337,7 @@
                         </a>
                         <ul class="sub-menu">
                             <li>
-                                <a href="blog.html">
-                                    Blog - Style 1
-                                </a>
-                            </li>
-                            <li>
-                                <a href="blog-2.html">
-                                    Blog - Style 2
-                                </a>
-                            </li>
-                            <li>
-                                <a href="post.html">
-                                    Single Post
-                                </a>
+                                <a href="blog.html">Blog</a>
                             </li>
                         </ul>
                     </li>

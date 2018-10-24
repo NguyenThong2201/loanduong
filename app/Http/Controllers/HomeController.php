@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
 use App\Product;
+use App\Slide;
 use Illuminate\Support\Facades\DB;
 use Session;
 
@@ -25,7 +27,8 @@ class HomeController extends Controller
         ->orWhere('sex', '=', 3)->get();
         $productsKids = Product::where('active', '=', 1)
         ->where('sex', '=', 0)->get();
-        return view('home.home', compact('products', 'productsWoment', 'productsMen', 'productsKids'));
+        $slide = Slide::where('active', '=', 1)->paginate(3);
+        return view('home.home', compact('products', 'productsWoment', 'productsMen', 'productsKids', 'slide'));
     }
 
     public function detail($titleSale){
@@ -77,5 +80,11 @@ class HomeController extends Controller
                 ->where('category_id', '=', $categoryId)->get();
         }
         return view('home.category', compact('productByCategory'));
+    }
+
+    public function Logout()
+    {
+        Auth::logout();
+        return redirect()->route('home');  
     }
 }

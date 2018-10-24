@@ -40,7 +40,7 @@
                 </div>
                 <div class="block-content collapse in">
                     <div class="span12">
-                        <form class="form-horizontal" id="form" action="admin/category/add" method="post" enctype="multipart/form-data">
+                        <form class="form-horizontal" id="form" action="admin/slide/add" method="post" enctype="multipart/form-data">
                             <fieldset>
                                 <legend>Form Components</legend>
                                 <input type="hidden" name="_token" value="{{csrf_token()}}">
@@ -65,7 +65,7 @@
                                 <div class="control-group">
                                     <label class="control-label" for="fileInput">Hình Slide <span class="required">*</span></label>
                                     <div class="controls">
-                                        <input class="input-file uniform_on form-control" type="file" name="img-slide" onchange="image_slide();"/>
+                                        <input class="input-file uniform_on form-control" type="file" name="image" onchange="image_slide();"/>
                                     </div>
                                 </div>
                                 <div class="control-group">

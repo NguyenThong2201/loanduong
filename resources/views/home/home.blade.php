@@ -6,17 +6,19 @@
         <div class="fr-slider-wrap">
             <div class="fr-slider">
                 <ul class="slides">
+                    @foreach($slide as $items)
                     <li>
-                        <img src="/home/img/slider/slide1.jpg" alt="">
+                        <img src="/page/image/{{ $items->image }}" alt="">
                         <div class="fr-slider-cont">
-                            <h3>SALE OF -30%</h3>
-                            <p>Winter collection for women's. <br>We all have choices for you. Check it out!</p>
+                            <h3>{{ $items->title}}</h3>
+                            <p>{{ $items->description }}</p>
                             <p class="fr-slider-more-wrap">
                                 <a class="fr-slider-more" href="#">View collection</a>
                             </p>
                         </div>
                     </li>
-                    <li>
+                    @endforeach
+                    <!-- <li>
                         <img src="/home/img/slider/slide1.jpg" alt="">
                         <div class="fr-slider-cont">
                             <h3>NEW COLLECTION</h3>
@@ -35,7 +37,7 @@
                                 <a class="fr-slider-more" href="#">Start shopping</a>
                             </p>
                         </div>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </div>
@@ -76,8 +78,21 @@
                             </p>
                             <div class="prod-i-skuwrapcolor">
                                 <ul class="prod-i-skucolor">
-                                    <li class="bx_active"><img src="/home/img/color/red.jpg" alt="Red"></li>
-                                    <li><img src="/home/img/color/blue.jpg" alt="Blue"></li>
+                                    <li class="active">
+                                        <img src="/home/img/color/blue.jpg" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="/home/img/color/red.jpg" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="/home/img/color/green.jpg" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="/home/img/color/yellow.jpg" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="/home/img/color/purple.jpg" alt="">
+                                    </li>
                                 </ul>
                             </div>
                         </li>
@@ -366,7 +381,7 @@
         <div class="banners-wrap">
             <div class="banners-list">
                 <div class="banner-i style_11">
-                    <span class="banner-i-bg" style="background: url(http://placehold.it/560x360);"></span>
+                    <span class="banner-i-bg"><img src="page/image/banner4.jpg"></span>
                     <div class="banner-i-cont">
                         <p class="banner-i-subttl">NEW COLLECTION</p>
                         <h3 class="banner-i-ttl">MEN'S<br>CLOTHING</h3>
@@ -374,7 +389,7 @@
                     </div>
                 </div>
                 <div class="banner-i style_22">
-                    <span class="banner-i-bg" style="background: url(http://placehold.it/270x360);"></span>
+                    <span class="banner-i-bg"><img src="page/image/quan-jean-skinny-rach-xanh-duong-1.jpg"></span>
                     <div class="banner-i-cont">
                         <p class="banner-i-subttl">GREAT COLLECTION</p>
                         <h3 class="banner-i-ttl">CLOTHING<br>ACCESSORIES</h3>
@@ -382,21 +397,21 @@
                     </div>
                 </div>
                 <div class="banner-i style_21">
-                    <span class="banner-i-bg" style="background: url(http://placehold.it/270x360);"></span>
+                    <span class="banner-i-bg"><img src="page/image/quan-jean-rach.jpg"></span>
                     <div class="banner-i-cont">
                         <h3 class="banner-i-ttl">SPORT<br>CLOTHES</h3>
                         <p class="banner-i-link"><a href="section.html">Go to catalog</a></p>
                     </div>
                 </div>
                 <div class="banner-i style_21">
-                    <span class="banner-i-bg" style="background: url(http://placehold.it/270x360);"></span>
+                    <span class="banner-i-bg"><img src="page/image/len.jpg"></span>
                     <div class="banner-i-cont">
                         <h3 class="banner-i-ttl">MEN AND <br>WOMEN SHOES</h3>
                         <p class="banner-i-link"><a href="section.html">View More</a></p>
                     </div>
                 </div>
                 <div class="banner-i style_22">
-                    <span class="banner-i-bg" style="background: url(http://placehold.it/270x360);"></span>
+                    <span class="banner-i-bg"><img src="page/image/jennu.jpg"></span>
                     <div class="banner-i-cont">
                         <p class="banner-i-subttl">DISCOUNT -20%</p>
                         <h3 class="banner-i-ttl">HATS<br>COLLECTION</h3>
@@ -404,7 +419,7 @@
                     </div>
                 </div>
                 <div class="banner-i style_12">
-                    <span class="banner-i-bg" style="background: url(http://placehold.it/560x360);"></span>
+                    <span class="banner-i-bg"><img src="page/image/sale.gif"></span>
                     <div class="banner-i-cont">
                         <p class="banner-i-subttl">STYLISH CLOTHES</p>
                         <h3 class="banner-i-ttl">WOMEN'S COLLECTION</h3>
@@ -424,8 +439,8 @@
                             <img src="/page/image/product/{{$items->image}}" alt="Sunt temporibus velit"><!-- NO SPACE -->
                         </a>
                         <p class="prod-i-info">
-                            <a href="#" class="prod-i-favorites"><span>Remove from Wishlist</span><i class="fa fa-remove"></i></a>
-                            <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                            <a href="javascript:void(0)" data-product-id='{{ $items->product_id }}' class="bnt-add-to-wish-list prod-i-favorites"><span>Yêu thích</span><i class="fa fa-heart"></i></a>
+                            <a href="javascript:void(0)" data-product-id='{{ $items->product_id }}' class="qview-btn prod-i-qview"><span>Chi tiết</span><i class="fa fa-search"></i></a>
                             <a class="prod-i-compare" href="#"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
                         </p>
                         <a href="#" class="prod-i-buy">Add to cart</a>

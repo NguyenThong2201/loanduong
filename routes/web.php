@@ -18,6 +18,7 @@ Route::get('/chi-tiet/{title_sale}', 'HomeController@detail')->name('detail');
 Route::get('/getDetailAjax', 'HomeController@getDetailAjax')->name('getDetailAjax');
 Route::get('/addCartAjax', 'OrderController@addCartAjax')->name('addCartAjax');
 Route::get('/gio-hang', 'OrderController@cartTop')->name('cartTop');
+Route::get('/logout', 'HomeController@logout')->name('logout');
 Route::get('/addWishlistAjax', 'WishlistController@addWishlistAjax')->name('addWishlistAjax');
 Auth::routes();
 Route::get('/danh-sach-yeu-thich', 'WishlistController@getListWishList')->name('getListWishList');
@@ -65,7 +66,7 @@ Route::group(['prefix'=>'admin'],function(){
         ]);
         Route::post('add',[
             'as'=>'addSlide',
-            'uses'=>'CategoryController@postAddCategory'
+            'uses'=>'SlideController@postAddSlide'
         ]);
     });
 });
