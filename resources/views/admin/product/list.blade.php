@@ -86,7 +86,7 @@
                                         @endif
                                     </td>
                                     <td class="center" width="40px">
-                                        <a href="">
+                                        <a href="/admin/product/edit/{{ $sp->product_id }}">
                                             <button class="btn btn-primary"><i class="icon-pencil icon-white"></i></button>
                                         </a>
                                     </td>

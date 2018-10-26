@@ -80,4 +80,8 @@ class ProductController extends Controller
         }
         return redirect('admin/product/add')->with('success','Thêm sản phẩm thành công');
     }
+    public function getEditProduct($product_id){
+        $category = Category::all();
+        return view('admin.product.edit', compact('category'));
+    }
 }

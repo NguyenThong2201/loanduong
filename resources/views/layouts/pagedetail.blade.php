@@ -18,9 +18,9 @@
     <link rel="stylesheet" href="{{ asset('home/css/jquery.fancybox.css') }}">
     <link rel="stylesheet" href="{{ asset('home/css/flexslider.css') }}">
     <link rel="stylesheet" href="{{ asset('home/css/swiper.css') }}">
-    <link rel="stylesheet" href="{{ asset('home/css/swiper.css') }}">
     <link rel="stylesheet" href="{{ asset('home/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('home/css/media.css') }}">
+    <link rel="stylesheet" href="{{ asset('home/css/custom.css') }}">
 </head>
 <body>
 <!-- Header - start -->

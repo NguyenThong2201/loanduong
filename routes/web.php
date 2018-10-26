@@ -40,6 +40,14 @@ Route::group(['prefix'=>'admin'],function(){
             'as'=>'add',
             'uses'=>'ProductController@postAddProduct'
         ]);
+        Route::get('edit/{product_id}',[
+            'as'=>'editProduct',
+            'uses'=>'ProductController@getEditProduct'
+        ]);
+        Route::post('edit',[
+            'as'=>'edit',
+            'uses'=>'ProductController@postEditProduct'
+        ]);
     });
     Route::group(['prefix'=>'category'],function(){
         Route::get('list',[

@@ -14,6 +14,7 @@ class SlideController extends BaseController
     public function postAddSlide(Request $request){
         $slide = new Slide;
         $slide->title 		= $request->title;
+        $slide->active      = $request->active;
         $slide->description = $request->description;
         if ($request->hasFile('image')){
             $fileImg              = $request->file('image');
