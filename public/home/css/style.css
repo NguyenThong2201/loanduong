@@ -7411,6 +7411,7 @@ body .cart-total .cart-summ b {
 	border: none;
 	left: auto;
 	background: #fff;
+	max-height: 450px;
 }
 .modalform {
 	font-size: 14px;
