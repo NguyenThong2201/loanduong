@@ -55,14 +55,14 @@
                     <li>
                         <a href="{{ route('getListWishList') }}">
                             <i class="fa fa-heart"></i>
-                            <span class="shop-menu-ttl">Wishlist</span>
+                            <span class="shop-menu-ttl">Danh sách yêu thích</span>
                         </a>
                     </li>
 
                     <li>
                         <a href="compare.html">
                             <i class="fa fa-bar-chart"></i>
-                            <span class="shop-menu-ttl">Compare</span> (5)
+                            <span class="shop-menu-ttl">Sản phẩm đã xem</span> (5)
                         </a>
                     </li>
                     @if(Auth::check())
@@ -71,17 +71,17 @@
                             <span class="shop-menu-ttl">{{Auth::user()->name}}</span>
                         </a>
                         <a href="{{ route('logout') }}">
-                            <span class="shop-menu-ttl">Logout</span>
+                            <span class="shop-menu-ttl">Đăng xuất</span>
                         </a>
                     </li>
                     @else
                     <li class="topauth">
                         <a href="{{ route('login') }}">
                             <i class="fa fa-lock"></i>
-                            <span class="shop-menu-ttl">Login</span>
+                            <span class="shop-menu-ttl">Đăng nhập</span>
                         </a>
                         <a href="{{ route('register') }}">
-                            <span class="shop-menu-ttl">Registration</span>
+                            <span class="shop-menu-ttl">Đăng kí</span>
                         </a>
                     </li>
                     @endif
@@ -89,7 +89,7 @@
                         <div class="h-cart">
                             <a href="{{ route('cartTop') }}">
                                 <i class="fa fa-shopping-cart"></i>
-                                <span class="shop-menu-ttl">Cart</span>
+                                <span class="shop-menu-ttl">Gió hàng</span>
                                 @if(session()->has('cartNew'))
                                 (<b class="total-cart">{{ session()->get('cartNew.quantity') }}</b>)
                                 @else
@@ -112,7 +112,7 @@
 
                 <!-- Catalog menu - start -->
                 <div class="topcatalog">
-                    <a class="topcatalog-btn" href="javascript:void(0)"><span>ALL</span> Category</a>
+                    <a class="topcatalog-btn" href="javascript:void(0)"><span>Tất cả</span> Các Loại</a>
                     <ul class="topcatalog-list">
                         <li>
                             <a href="{{ route('category', 1) }}">
@@ -149,7 +149,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="catalog-list.html">
+                            <a href="#">
                                 Trẻ Em
                             </a>
                             <i class="fa fa-angle-right"></i>
@@ -298,7 +298,7 @@
                     </li>
                     <li class="menu-item-has-children">
                         <a href="javascript:void(0)">
-                            Category <i class="fa fa-angle-down"></i>
+                            Các Loại <i class="fa fa-angle-down"></i>
                         </a>
                         <ul class="sub-menu">
                             @foreach($listCategory as $items)

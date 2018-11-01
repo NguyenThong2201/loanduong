@@ -23,11 +23,11 @@
         </div>
         <!-- Popular Products -->
         <div class="fr-pop-wrap">
-            <h3 class="component-ttl"><span>All category</span></h3>
+            <h3 class="component-ttl"><span>Xu hướng mới</span></h3>
             <ul class="fr-pop-tabs sections-show">
-                <li><a data-frpoptab-num="1" data-frpoptab="#frpoptab-tab-1" href="#" class="active">ALL</a></li>
-                <li><a data-frpoptab-num="2" data-frpoptab="#frpoptab-tab-2" href="#">Woment</a></li>
-                <li><a data-frpoptab-num="3" data-frpoptab="#frpoptab-tab-3" href="#">Men</a></li>
+                <li><a data-frpoptab-num="1" data-frpoptab="#frpoptab-tab-1" href="#" class="active">Tất cả</a></li>
+                <li><a data-frpoptab-num="2" data-frpoptab="#frpoptab-tab-2" href="#">Shop nữ</a></li>
+                <li><a data-frpoptab-num="3" data-frpoptab="#frpoptab-tab-3" href="#">Shop nam</a></li>
                 <li><a data-frpoptab-num="4" data-frpoptab="#frpoptab-tab-4" href="#">Trẻ em</a></li>
                 <li><a data-frpoptab-num="5" data-frpoptab="#frpoptab-tab-5" href="#">Thế giới giày</a></li>
             </ul>
@@ -52,7 +52,7 @@
                                 @if($items->promotion_price < $items->unit_price)
                                 <p class="prod-sticker-2">SALE</p>
                                 @endif
-                                <br><p class="prod-sticker-1">HIT</p>
+                                <br><p class="prod-sticker-1">NEW</p>
                             </div>
                             <h3>
                                 <a href="{{ route('detail', $items->title_sale) }}">{{ $items->title }}</a>
@@ -98,8 +98,8 @@
                                     <img src="/page/image/product/{{$items->image}}" alt="Aspernatur excepturi rem">
                                 </a>
                                 <p class="prod-i-info">
-                                    <a href="javascript:void(0)" data-product-id='{{ $items->product_id }}' class="bnt-add-to-wish-list prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
-                                    <a href="javascript:void(0)" data-product-id='{{ $items->product_id }}' class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
+                                    <a href="javascript:void(0)" data-product-id='{{ $items->product_id }}' class="bnt-add-to-wish-list prod-i-favorites"><span>Yêu thích</span><i class="fa fa-heart"></i></a>
+                                    <a href="javascript:void(0)" data-product-id='{{ $items->product_id }}' class="prod-i-qview"><span>Chi Tiết</span><i class="fa fa-search"></i></a>
                                     <a class="prod-i-compare" href="javascript:void(0)"><span>Compare</span><i class="fa fa-bar-chart"></i></a>
                                 </p>
                                 <p class="prod-i-addwrap">
