@@ -134,10 +134,10 @@
                 </h3>
                 <ul class="nav nav-pills nav-stacked">
                     <li><a href="blog.html">Blog</a></li>
-                    <li><a href="blog.html">News</a></li>
-                    <li><a href="reviews.html">Reviews</a></li>
-                    <li><a href="blog.html">Articles</a></li>
-                    <li><a href="contacts.html">Contacts</a></li>
+                    <li><a href="blog.html">Tin tức</a></li>
+                    <li><a href="reviews.html">Đánh giá</a></li>
+                    <li><a href="blog.html">Tùy chọn</a></li>
+                    <li><a href="contacts.html">Liên hệ</a></li>
                 </ul>
             </div>
             <div class="f-menu">
@@ -153,12 +153,12 @@
                 </ul>
             </div>
             <div class="f-subscribe">
-                <h3>Subscribe to news</h3>
+                <h3> Nhận tin sản phẩm mới </h3>
                 <form class="f-subscribe-form" action="#">
-                    <input placeholder="Your e-mail" type="text">
+                    <input placeholder="Email bạn" type="text">
                     <button type="submit"><i class="fa fa-paper-plane"></i></button>
                 </form>
-                <p>Enter your email address if you want to receive our newsletter. Subscribe now!</p>
+                <p>Hãy nhập mail. Chúng tôi sẻ gửi mail cho bạn khi có sản phẩm mới!</p>
             </div>
         </div>
     </div>
@@ -194,7 +194,7 @@
                     </li>
                 </ul>
                 <div class="footer-copyright">
-                    <i><a href="https://themeforest.net/user/real-web?ref=real-web">Real-Web</a></i> © Copyright 2017
+                    <i><a href="https://themeforest.net/user/real-web?ref=real-web">By Nguyen Thong</a></i> © Copyright 2018
                 </div>
             </div>
         </div>

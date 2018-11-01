@@ -1,5 +1,4 @@
 <header class="header">
-
     <!-- Topbar - start -->
     <div class="header_top">
         <div class="container">
@@ -14,22 +13,22 @@
             <!-- Social links -->
             <ul class="social-icons nav navbar-nav">
                 <li>
-                    <a href="#" rel="nofollow" target="_blank">
+                    <a href="javascript:void(0)" rel="nofollow" target="_blank">
                         <i class="fa fa-facebook"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="#" rel="nofollow" target="_blank">
+                    <a href="javascript:void(0)" rel="nofollow" target="_blank">
                         <i class="fa fa-google-plus"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="#" rel="nofollow" target="_blank">
+                    <a href="javascript:void(0)" rel="nofollow" target="_blank">
                         <i class="fa fa-twitter"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="#" rel="nofollow" target="_blank">
+                    <a href="javascript:void(0)" rel="nofollow" target="_blank">
                         <i class="fa fa-vk"></i>
                     </a>
                 </li>
@@ -113,7 +112,7 @@
 
                 <!-- Catalog menu - start -->
                 <div class="topcatalog">
-                    <a class="topcatalog-btn" href="catalog-list.html"><span>ALL</span> Category</a>
+                    <a class="topcatalog-btn" href="javascript:void(0)"><span>ALL</span> Category</a>
                     <ul class="topcatalog-list">
                         <li>
                             <a href="{{ route('category', 1) }}">
@@ -295,12 +294,10 @@
 
                 <ul class="mainmenu">
                     <li>
-                        <a href="index.html" class="active">
-                            Home
-                        </a>
+                        <a href="{{ route('home') }}" class="active">Trang chủ</a>
                     </li>
                     <li class="menu-item-has-children">
-                        <a href="catalog-list.html">
+                        <a href="javascript:void(0)">
                             Category <i class="fa fa-angle-down"></i>
                         </a>
                         <ul class="sub-menu">
@@ -314,7 +311,7 @@
                         </ul>
                     </li>
                     <li class="menu-item-has-children">
-                        <a href="product.html">
+                        <a href="#">
                             Product <i class="fa fa-angle-down"></i>
                         </a>
                         <ul class="sub-menu">
@@ -327,19 +324,10 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="elements.html">
-                            Elements
-                        </a>
+                        <a href="{{ route('contacts') }}">Liên hệ</a>
                     </li>
-                    <li class="menu-item-has-children">
-                        <a href="blog.html">
-                            Blog <i class="fa fa-angle-down"></i>
-                        </a>
-                        <ul class="sub-menu">
-                            <li>
-                                <a href="blog.html">Blog</a>
-                            </li>
-                        </ul>
+                    <li>
+                        <a href="/">Blog</a>
                     </li>
                     <li class="menu-item-has-children">
                         <a href="#">
@@ -347,9 +335,7 @@
                         </a>
                         <ul class="sub-menu">
                             <li>
-                                <a href="contacts.html">
-                                    Contacts
-                                </a>
+                                <a href="{{ route('contacts') }}">Liên hệ</a>
                             </li>
                             <li>
                                 <a href="cart.html">

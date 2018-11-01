@@ -82,6 +82,10 @@ class HomeController extends Controller
         return view('home.category', compact('productByCategory'));
     }
 
+    public function Contacts(){
+        return view('home.contacts');
+    }
+
     public function Logout()
     {
         Auth::logout();

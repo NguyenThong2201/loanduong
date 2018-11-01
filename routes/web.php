@@ -19,6 +19,7 @@ Route::get('/getDetailAjax', 'HomeController@getDetailAjax')->name('getDetailAja
 Route::get('/addCartAjax', 'OrderController@addCartAjax')->name('addCartAjax');
 Route::get('/gio-hang', 'OrderController@cartTop')->name('cartTop');
 Route::get('/logout', 'HomeController@logout')->name('logout');
+Route::get('/lien-he', 'HomeController@contacts')->name('contacts');
 Route::get('/addWishlistAjax', 'WishlistController@addWishlistAjax')->name('addWishlistAjax');
 Auth::routes();
 Route::get('/danh-sach-yeu-thich', 'WishlistController@getListWishList')->name('getListWishList');
