@@ -154,8 +154,8 @@
                         @foreach($productsKids as $items)
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="{{ route('detail', $items->title_sale) }}" class="prod-i-img"><!-- NO SPACE -->
-                                    <img src="/page/image/product/{{$items->image}}" alt="Nisi provident atque"><!-- NO SPACE -->
+                                <a href="{{ route('detail', $items->title_sale) }}" class="prod-i-img">
+                                    <img src="/page/image/product/{{$items->image}}" alt="Nisi provident atque">
                                 </a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
@@ -181,7 +181,8 @@
                     <ul class="slides">
                         <li class="prod-i">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img src="http://placehold.it/252x250" alt="Nisi autem error"><!-- NO SPACE --></a>
+                                <a href="product.html" class="prod-i-img">
+                                    <img src="http://placehold.it/252x250" alt="Nisi autem error"></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="prod-i-favorites"><span>Wishlist</span><i class="fa fa-heart"></i></a>
                                     <a href="#" class="prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
@@ -364,8 +365,8 @@
                     </ul>
 
                 </div>
-            </div><!-- .fr-pop-tab-cont -->
-        </div><!-- .fr-pop-wrap -->
+            </div>
+        </div>
         <!-- Banners -->
         <div class="banners-wrap">
             <div class="banners-list">
@@ -418,7 +419,6 @@
                 </div>
             </div>
         </div>
-        <!-- Load all products -->
         <div class="section-cont section-full">
             <div class="prod-items section-items">
                 @foreach($products as $items)

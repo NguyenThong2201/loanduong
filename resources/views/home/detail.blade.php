@@ -32,16 +32,6 @@
 							</a>
 						</li>
 						@endforeach
-						<li>
-							<a data-fancybox-group="product" class="fancy-img" href="http://placehold.it/500x722">
-								<img src="http://placehold.it/500x722" alt="">
-							</a>
-						</li>
-						<li>
-							<a data-fancybox-group="product" class="fancy-img" href="http://placehold.it/500x722">
-								<img src="http://placehold.it/500x722" alt="">
-							</a>
-						</li>
 					</ul>
 				</div>
 				<div class="prod-thumbs">
@@ -53,16 +43,6 @@
 							</a>
 						</li>
 						@endforeach
-						<li>
-							<a data-slide-index="10" href="javascript:void(0)">
-								<img src="http://placehold.it/500x722" alt="">
-							</a>
-						</li>
-						<li>
-							<a data-slide-index="20" href="javascript:void(0)">
-								<img src="http://placehold.it/500x722" alt="">
-							</a>
-						</li>
 					</ul>
 				</div>
 			</div>
